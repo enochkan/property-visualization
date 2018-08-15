@@ -1,0 +1,3911 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script>L_PREFER_CANVAS=false; L_NO_TOUCH=false; L_DISABLE_3D=false;</script>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.2.0/dist/leaflet.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.2.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawgit.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+    <style>#map_13cc1119887741afa21d6adf2c23a219 {
+        position: relative;
+        width: 100.0%;
+        height: 100.0%;
+        left: 0.0%;
+        top: 0.0%;
+        }
+    </style>
+</head>
+<body>    
+    
+    <div class="folium-map" id="map_13cc1119887741afa21d6adf2c23a219" ></div>
+</body>
+<script>    
+    
+    
+        var bounds = null;
+    
+
+    var map_13cc1119887741afa21d6adf2c23a219 = L.map(
+        'map_13cc1119887741afa21d6adf2c23a219', {
+        center: [22.34, 114.1],
+        zoom: 10.5,
+        maxBounds: bounds,
+        layers: [],
+        worldCopyJump: false,
+        crs: L.CRS.EPSG3857,
+        zoomControl: true,
+        });
+
+    
+    
+    var tile_layer_26b49028aeab4c629b08f1d29f097739 = L.tileLayer(
+        'https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png',
+        {
+        "attribution": null, 
+        "detectRetina": false, 
+        "maxNativeZoom": 18, 
+        "maxZoom": 18, 
+        "minZoom": 0, 
+        "noWrap": false, 
+        "subdomains": "abc"
+}).addTo(map_13cc1119887741afa21d6adf2c23a219);
+    var tile_layer_6393edf0d1f24370914244999c440766 = L.tileLayer(
+        'https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_all/{z}/{x}/{y}.png',
+        {
+        "attribution": null, 
+        "detectRetina": false, 
+        "maxNativeZoom": 18, 
+        "maxZoom": 18, 
+        "minZoom": 0, 
+        "noWrap": false, 
+        "subdomains": "abc"
+}).addTo(map_13cc1119887741afa21d6adf2c23a219);
+    var tile_layer_38e420c466b3418b8e82c12483657555 = L.tileLayer(
+        'https://stamen-tiles-{s}.a.ssl.fastly.net/terrain/{z}/{x}/{y}.jpg',
+        {
+        "attribution": null, 
+        "detectRetina": false, 
+        "maxNativeZoom": 18, 
+        "maxZoom": 18, 
+        "minZoom": 0, 
+        "noWrap": false, 
+        "subdomains": "abc"
+}).addTo(map_13cc1119887741afa21d6adf2c23a219);
+    var tile_layer_e2839599816042a1970aedaa9ff9b808 = L.tileLayer(
+        'https://stamen-tiles-{s}.a.ssl.fastly.net/toner/{z}/{x}/{y}.png',
+        {
+        "attribution": null, 
+        "detectRetina": false, 
+        "maxNativeZoom": 18, 
+        "maxZoom": 18, 
+        "minZoom": 0, 
+        "noWrap": false, 
+        "subdomains": "abc"
+}).addTo(map_13cc1119887741afa21d6adf2c23a219);
+    
+            var layer_control_14147278427e496fa05f94a997392cb6 = {
+                base_layers : { "cartodbpositron" : tile_layer_26b49028aeab4c629b08f1d29f097739,"cartodbdark_matter" : tile_layer_6393edf0d1f24370914244999c440766,"stamenterrain" : tile_layer_38e420c466b3418b8e82c12483657555,"stamentoner" : tile_layer_e2839599816042a1970aedaa9ff9b808, },
+                overlays : {  }
+                };
+            L.control.layers(
+                layer_control_14147278427e496fa05f94a997392cb6.base_layers,
+                layer_control_14147278427e496fa05f94a997392cb6.overlays,
+                {position: 'topright',
+                 collapsed: true,
+                 autoZIndex: true
+                }).addTo(map_13cc1119887741afa21d6adf2c23a219);
+            
+                tile_layer_6393edf0d1f24370914244999c440766.remove();
+                tile_layer_38e420c466b3418b8e82c12483657555.remove();
+                tile_layer_e2839599816042a1970aedaa9ff9b808.remove();
+        
+    
+
+            var circle_4dd0e7076a284d8c87583ca0a161aa73 = L.circle(
+                [22.3223042, 114.2131009],
+                {
+  "bubblingMouseEvents": true, 
+  "color": "#FF0033", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": true, 
+  "fillColor": "#FF0033", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "opacity": 0.89, 
+  "radius": 608, 
+  "stroke": true, 
+  "weight": 1
+}
+                )
+                .addTo(map_13cc1119887741afa21d6adf2c23a219);
+            
+    
+            var popup_f76caa18340a4e4eb31c2060142a26bb = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_42ee3d74af0948e6906ee00e9f2aaad2 = $('<div id="html_42ee3d74af0948e6906ee00e9f2aaad2" style="width: 100.0%; height: 100.0%;">Telford Gardens: 15223 HKD per sq ft</div>')[0];
+                popup_f76caa18340a4e4eb31c2060142a26bb.setContent(html_42ee3d74af0948e6906ee00e9f2aaad2);
+            
+
+            circle_4dd0e7076a284d8c87583ca0a161aa73.bindPopup(popup_f76caa18340a4e4eb31c2060142a26bb)
+            ;
+
+            
+        
+    
+
+            var circle_d5015170cf204aff9ac4ff47fa4fc792 = L.circle(
+                [999.0, 999.0],
+                {
+  "bubblingMouseEvents": true, 
+  "color": "#FF6633", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": true, 
+  "fillColor": "#FF6633", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "opacity": 0.89, 
+  "radius": 454, 
+  "stroke": true, 
+  "weight": 1
+}
+                )
+                .addTo(map_13cc1119887741afa21d6adf2c23a219);
+            
+    
+            var popup_fc87d6b4494843d78ad74c0af702ac71 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_a2b80edd8d6e46a8b098bcebf587cba5 = $('<div id="html_a2b80edd8d6e46a8b098bcebf587cba5" style="width: 100.0%; height: 100.0%;">Kingswood Villas: 11365 HKD per sq ft</div>')[0];
+                popup_fc87d6b4494843d78ad74c0af702ac71.setContent(html_a2b80edd8d6e46a8b098bcebf587cba5);
+            
+
+            circle_d5015170cf204aff9ac4ff47fa4fc792.bindPopup(popup_fc87d6b4494843d78ad74c0af702ac71)
+            ;
+
+            
+        
+    
+
+            var circle_234786f9e9c3461b8073485cdc2be241 = L.circle(
+                [999.0, 999.0],
+                {
+  "bubblingMouseEvents": true, 
+  "color": "#FF0033", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": true, 
+  "fillColor": "#FF0033", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "opacity": 0.89, 
+  "radius": 666, 
+  "stroke": true, 
+  "weight": 1
+}
+                )
+                .addTo(map_13cc1119887741afa21d6adf2c23a219);
+            
+    
+            var popup_46bdc50da77a470aab8f719356480e76 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_5a289a90812f46b48ed1a715c73d5275 = $('<div id="html_5a289a90812f46b48ed1a715c73d5275" style="width: 100.0%; height: 100.0%;">Yoho Midtown: 16661 HKD per sq ft</div>')[0];
+                popup_46bdc50da77a470aab8f719356480e76.setContent(html_5a289a90812f46b48ed1a715c73d5275);
+            
+
+            circle_234786f9e9c3461b8073485cdc2be241.bindPopup(popup_46bdc50da77a470aab8f719356480e76)
+            ;
+
+            
+        
+    
+
+            var circle_7cb57ee6d072453e8d678f24bc83a766 = L.circle(
+                [22.3198545, 114.1580221],
+                {
+  "bubblingMouseEvents": true, 
+  "color": "#FF0033", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": true, 
+  "fillColor": "#FF0033", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "opacity": 0.89, 
+  "radius": 829, 
+  "stroke": true, 
+  "weight": 1
+}
+                )
+                .addTo(map_13cc1119887741afa21d6adf2c23a219);
+            
+    
+            var popup_f9cfdbbb6ba14f14a5d8d781039e72a2 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_bfa2157c8a2d4e3e8fafc4b1d9cbd8d5 = $('<div id="html_bfa2157c8a2d4e3e8fafc4b1d9cbd8d5" style="width: 100.0%; height: 100.0%;">Island Harbourview: 20733 HKD per sq ft</div>')[0];
+                popup_f9cfdbbb6ba14f14a5d8d781039e72a2.setContent(html_bfa2157c8a2d4e3e8fafc4b1d9cbd8d5);
+            
+
+            circle_7cb57ee6d072453e8d678f24bc83a766.bindPopup(popup_f9cfdbbb6ba14f14a5d8d781039e72a2)
+            ;
+
+            
+        
+    
+
+            var circle_38f9ddb5b5d4438293d939a956648763 = L.circle(
+                [22.4259432, 114.2364499],
+                {
+  "bubblingMouseEvents": true, 
+  "color": "#FF0033", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": true, 
+  "fillColor": "#FF0033", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "opacity": 0.89, 
+  "radius": 617, 
+  "stroke": true, 
+  "weight": 1
+}
+                )
+                .addTo(map_13cc1119887741afa21d6adf2c23a219);
+            
+    
+            var popup_c88b957591824f079011f1221b055c30 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_b70058fd81cb4759a97f13c5b9b08aec = $('<div id="html_b70058fd81cb4759a97f13c5b9b08aec" style="width: 100.0%; height: 100.0%;">Villa Athena: 15446 HKD per sq ft</div>')[0];
+                popup_c88b957591824f079011f1221b055c30.setContent(html_b70058fd81cb4759a97f13c5b9b08aec);
+            
+
+            circle_38f9ddb5b5d4438293d939a956648763.bindPopup(popup_c88b957591824f079011f1221b055c30)
+            ;
+
+            
+        
+    
+
+            var circle_1f426013d6084889a91690d41a3141e1 = L.circle(
+                [22.3672899, 114.0614461],
+                {
+  "bubblingMouseEvents": true, 
+  "color": "#FF6633", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": true, 
+  "fillColor": "#FF6633", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "opacity": 0.89, 
+  "radius": 547, 
+  "stroke": true, 
+  "weight": 1
+}
+                )
+                .addTo(map_13cc1119887741afa21d6adf2c23a219);
+            
+    
+            var popup_a7cc2e85ba01413cbc5d90494c3afe53 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_07e84545b011417b8c417e9ce81576bf = $('<div id="html_07e84545b011417b8c417e9ce81576bf" style="width: 100.0%; height: 100.0%;">Bellagio: 13692 HKD per sq ft</div>')[0];
+                popup_a7cc2e85ba01413cbc5d90494c3afe53.setContent(html_07e84545b011417b8c417e9ce81576bf);
+            
+
+            circle_1f426013d6084889a91690d41a3141e1.bindPopup(popup_a7cc2e85ba01413cbc5d90494c3afe53)
+            ;
+
+            
+        
+    
+
+            var circle_e316329fdd104319a24d2e85705dcf05 = L.circle(
+                [999.0, 999.0],
+                {
+  "bubblingMouseEvents": true, 
+  "color": "#FF0033", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": true, 
+  "fillColor": "#FF0033", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "opacity": 0.89, 
+  "radius": 818, 
+  "stroke": true, 
+  "weight": 1
+}
+                )
+                .addTo(map_13cc1119887741afa21d6adf2c23a219);
+            
+    
+            var popup_d22f89c85e8e42e9bdb0d11a5b054ed3 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_5c4bc9936a174430b0a337b6774f864e = $('<div id="html_5c4bc9936a174430b0a337b6774f864e" style="width: 100.0%; height: 100.0%;">Taikoo Shing: 20474 HKD per sq ft</div>')[0];
+                popup_d22f89c85e8e42e9bdb0d11a5b054ed3.setContent(html_5c4bc9936a174430b0a337b6774f864e);
+            
+
+            circle_e316329fdd104319a24d2e85705dcf05.bindPopup(popup_d22f89c85e8e42e9bdb0d11a5b054ed3)
+            ;
+
+            
+        
+    
+
+            var circle_b585aae7f87c41a4aa19352e461ed15f = L.circle(
+                [22.3034335, 114.1855311],
+                {
+  "bubblingMouseEvents": true, 
+  "color": "#FF0033", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": true, 
+  "fillColor": "#FF0033", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "opacity": 0.89, 
+  "radius": 784, 
+  "stroke": true, 
+  "weight": 1
+}
+                )
+                .addTo(map_13cc1119887741afa21d6adf2c23a219);
+            
+    
+            var popup_a3af4312c808443193421f66acbae145 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_272c901cbeda457fbe00797d4e434d8f = $('<div id="html_272c901cbeda457fbe00797d4e434d8f" style="width: 100.0%; height: 100.0%;">Harbour Place: 19615 HKD per sq ft</div>')[0];
+                popup_a3af4312c808443193421f66acbae145.setContent(html_272c901cbeda457fbe00797d4e434d8f);
+            
+
+            circle_b585aae7f87c41a4aa19352e461ed15f.bindPopup(popup_a3af4312c808443193421f66acbae145)
+            ;
+
+            
+        
+    
+
+            var circle_c629dbb5b6dc485a8b2145ff2b800ea5 = L.circle(
+                [999.0, 999.0],
+                {
+  "bubblingMouseEvents": true, 
+  "color": "#FF0033", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": true, 
+  "fillColor": "#FF0033", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "opacity": 0.89, 
+  "radius": 1203, 
+  "stroke": true, 
+  "weight": 1
+}
+                )
+                .addTo(map_13cc1119887741afa21d6adf2c23a219);
+            
+    
+            var popup_b579a73f78c94825bdc57ab815189246 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_b11829ff51ba4c40962faf7ead33a830 = $('<div id="html_b11829ff51ba4c40962faf7ead33a830" style="width: 100.0%; height: 100.0%;">The Avenue: 30079 HKD per sq ft</div>')[0];
+                popup_b579a73f78c94825bdc57ab815189246.setContent(html_b11829ff51ba4c40962faf7ead33a830);
+            
+
+            circle_c629dbb5b6dc485a8b2145ff2b800ea5.bindPopup(popup_b579a73f78c94825bdc57ab815189246)
+            ;
+
+            
+        
+    
+
+            var circle_127b9799552d455ca585923bc217be6d = L.circle(
+                [22.4363558, 114.0231212],
+                {
+  "bubblingMouseEvents": true, 
+  "color": "#FF6633", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": true, 
+  "fillColor": "#FF6633", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "opacity": 0.89, 
+  "radius": 447, 
+  "stroke": true, 
+  "weight": 1
+}
+                )
+                .addTo(map_13cc1119887741afa21d6adf2c23a219);
+            
+    
+            var popup_272ba0275c7b413db8bbbbfbedfc6221 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_693c1347c1ac45a19fc3fa563fb03c70 = $('<div id="html_693c1347c1ac45a19fc3fa563fb03c70" style="width: 100.0%; height: 100.0%;">Park Signature: 11196 HKD per sq ft</div>')[0];
+                popup_272ba0275c7b413db8bbbbfbedfc6221.setContent(html_693c1347c1ac45a19fc3fa563fb03c70);
+            
+
+            circle_127b9799552d455ca585923bc217be6d.bindPopup(popup_272ba0275c7b413db8bbbbfbedfc6221)
+            ;
+
+            
+        
+    
+
+            var circle_dea19854d92340a0b905c0d0cc6e743c = L.circle(
+                [22.3172833, 114.1922567],
+                {
+  "bubblingMouseEvents": true, 
+  "color": "#FF0033", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": true, 
+  "fillColor": "#FF0033", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "opacity": 0.89, 
+  "radius": 666, 
+  "stroke": true, 
+  "weight": 1
+}
+                )
+                .addTo(map_13cc1119887741afa21d6adf2c23a219);
+            
+    
+            var popup_e67f8c6da0c74a4fb60b358018564910 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_7107eec413d34d61bd6e2853e450bd07 = $('<div id="html_7107eec413d34d61bd6e2853e450bd07" style="width: 100.0%; height: 100.0%;">Wyler Gardens: 16669 HKD per sq ft</div>')[0];
+                popup_e67f8c6da0c74a4fb60b358018564910.setContent(html_7107eec413d34d61bd6e2853e450bd07);
+            
+
+            circle_dea19854d92340a0b905c0d0cc6e743c.bindPopup(popup_e67f8c6da0c74a4fb60b358018564910)
+            ;
+
+            
+        
+    
+
+            var circle_d1a286adf1c949e1a18b7fbb972b9aad = L.circle(
+                [22.378496, 114.1082871],
+                {
+  "bubblingMouseEvents": true, 
+  "color": "#FF6633", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": true, 
+  "fillColor": "#FF6633", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "opacity": 0.89, 
+  "radius": 555, 
+  "stroke": true, 
+  "weight": 1
+}
+                )
+                .addTo(map_13cc1119887741afa21d6adf2c23a219);
+            
+    
+            var popup_b46f83d3f3764825bcae173dc04d4bee = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_5ef2d91eea024738819922d07c5961c9 = $('<div id="html_5ef2d91eea024738819922d07c5961c9" style="width: 100.0%; height: 100.0%;">Tsuen Wan Centre: 13889 HKD per sq ft</div>')[0];
+                popup_b46f83d3f3764825bcae173dc04d4bee.setContent(html_5ef2d91eea024738819922d07c5961c9);
+            
+
+            circle_d1a286adf1c949e1a18b7fbb972b9aad.bindPopup(popup_b46f83d3f3764825bcae173dc04d4bee)
+            ;
+
+            
+        
+    
+
+            var circle_8e473561cfea47ffb12540c041f8dfb0 = L.circle(
+                [22.276619, 114.2397239],
+                {
+  "bubblingMouseEvents": true, 
+  "color": "#FF0033", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": true, 
+  "fillColor": "#FF0033", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "opacity": 0.89, 
+  "radius": 706, 
+  "stroke": true, 
+  "weight": 1
+}
+                )
+                .addTo(map_13cc1119887741afa21d6adf2c23a219);
+            
+    
+            var popup_157b9b61ea434c07a377e7d59267daac = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_849c38415fdb4de39ce41640475828a6 = $('<div id="html_849c38415fdb4de39ce41640475828a6" style="width: 100.0%; height: 100.0%;">Heng Fa Chuen: 17669 HKD per sq ft</div>')[0];
+                popup_157b9b61ea434c07a377e7d59267daac.setContent(html_849c38415fdb4de39ce41640475828a6);
+            
+
+            circle_8e473561cfea47ffb12540c041f8dfb0.bindPopup(popup_157b9b61ea434c07a377e7d59267daac)
+            ;
+
+            
+        
+    
+
+            var circle_94246be1f9a44839878fd558baf62a35 = L.circle(
+                [22.2875129, 113.9394154],
+                {
+  "bubblingMouseEvents": true, 
+  "color": "#FF6633", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": true, 
+  "fillColor": "#FF6633", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "opacity": 0.89, 
+  "radius": 531, 
+  "stroke": true, 
+  "weight": 1
+}
+                )
+                .addTo(map_13cc1119887741afa21d6adf2c23a219);
+            
+    
+            var popup_ffaf6df747d441b5b6dcfd6f1f25a7c5 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_08d2228c72e740f0a0d76be8fbdc41a1 = $('<div id="html_08d2228c72e740f0a0d76be8fbdc41a1" style="width: 100.0%; height: 100.0%;">Tung Chung Crescent: 13281 HKD per sq ft</div>')[0];
+                popup_ffaf6df747d441b5b6dcfd6f1f25a7c5.setContent(html_08d2228c72e740f0a0d76be8fbdc41a1);
+            
+
+            circle_94246be1f9a44839878fd558baf62a35.bindPopup(popup_ffaf6df747d441b5b6dcfd6f1f25a7c5)
+            ;
+
+            
+        
+    
+
+            var circle_28994712dff34e95a93b39df2335a923 = L.circle(
+                [22.3227898, 114.2538875],
+                {
+  "bubblingMouseEvents": true, 
+  "color": "#FF6633", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": true, 
+  "fillColor": "#FF6633", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "opacity": 0.89, 
+  "radius": 505, 
+  "stroke": true, 
+  "weight": 1
+}
+                )
+                .addTo(map_13cc1119887741afa21d6adf2c23a219);
+            
+    
+            var popup_41a1744820d3420a950968cb5378c014 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_12646875190b4c49bab30ce42c7637cc = $('<div id="html_12646875190b4c49bab30ce42c7637cc" style="width: 100.0%; height: 100.0%;">Serenity Place: 12642 HKD per sq ft</div>')[0];
+                popup_41a1744820d3420a950968cb5378c014.setContent(html_12646875190b4c49bab30ce42c7637cc);
+            
+
+            circle_28994712dff34e95a93b39df2335a923.bindPopup(popup_41a1744820d3420a950968cb5378c014)
+            ;
+
+            
+        
+    
+
+            var circle_65266b548f744f7d875009b9490ff8f8 = L.circle(
+                [22.3050958, 114.1906104],
+                {
+  "bubblingMouseEvents": true, 
+  "color": "#FF0033", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": true, 
+  "fillColor": "#FF0033", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "opacity": 0.89, 
+  "radius": 701, 
+  "stroke": true, 
+  "weight": 1
+}
+                )
+                .addTo(map_13cc1119887741afa21d6adf2c23a219);
+            
+    
+            var popup_05412b8d236a4ae399b8889112beb04e = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_d1f6539e8f2740fc8be22ed54728bb12 = $('<div id="html_d1f6539e8f2740fc8be22ed54728bb12" style="width: 100.0%; height: 100.0%;">Whampoa Garden: 17535 HKD per sq ft</div>')[0];
+                popup_05412b8d236a4ae399b8889112beb04e.setContent(html_d1f6539e8f2740fc8be22ed54728bb12);
+            
+
+            circle_65266b548f744f7d875009b9490ff8f8.bindPopup(popup_05412b8d236a4ae399b8889112beb04e)
+            ;
+
+            
+        
+    
+
+            var circle_2fd9b360b5464603979725fb0cbebec3 = L.circle(
+                [22.3814695, 114.1878065],
+                {
+  "bubblingMouseEvents": true, 
+  "color": "#FF0033", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": true, 
+  "fillColor": "#FF0033", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "opacity": 0.89, 
+  "radius": 721, 
+  "stroke": true, 
+  "weight": 1
+}
+                )
+                .addTo(map_13cc1119887741afa21d6adf2c23a219);
+            
+    
+            var popup_018744fcdc074d8eb32c3890253c23be = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_384b768e95bb41c7bb734215e33ab583 = $('<div id="html_384b768e95bb41c7bb734215e33ab583" style="width: 100.0%; height: 100.0%;">Wai Wah Centre: 18031 HKD per sq ft</div>')[0];
+                popup_018744fcdc074d8eb32c3890253c23be.setContent(html_384b768e95bb41c7bb734215e33ab583);
+            
+
+            circle_2fd9b360b5464603979725fb0cbebec3.bindPopup(popup_018744fcdc074d8eb32c3890253c23be)
+            ;
+
+            
+        
+    
+
+            var circle_121de2bfe9164b9b972cb2d00bfa2567 = L.circle(
+                [22.3051702, 114.2523725],
+                {
+  "bubblingMouseEvents": true, 
+  "color": "#FF0033", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": true, 
+  "fillColor": "#FF0033", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "opacity": 0.89, 
+  "radius": 670, 
+  "stroke": true, 
+  "weight": 1
+}
+                )
+                .addTo(map_13cc1119887741afa21d6adf2c23a219);
+            
+    
+            var popup_e3984bc1ed384647bcf3810c44777570 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_d7d9c40e28714c4e82e2fc8e4b1c0cfd = $('<div id="html_d7d9c40e28714c4e82e2fc8e4b1c0cfd" style="width: 100.0%; height: 100.0%;">Metro Town: 16754 HKD per sq ft</div>')[0];
+                popup_e3984bc1ed384647bcf3810c44777570.setContent(html_d7d9c40e28714c4e82e2fc8e4b1c0cfd);
+            
+
+            circle_121de2bfe9164b9b972cb2d00bfa2567.bindPopup(popup_e3984bc1ed384647bcf3810c44777570)
+            ;
+
+            
+        
+    
+
+            var circle_407c1d6156df4517ae47532708635db8 = L.circle(
+                [22.3163792, 114.264418],
+                {
+  "bubblingMouseEvents": true, 
+  "color": "#FF0033", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": true, 
+  "fillColor": "#FF0033", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "opacity": 0.89, 
+  "radius": 703, 
+  "stroke": true, 
+  "weight": 1
+}
+                )
+                .addTo(map_13cc1119887741afa21d6adf2c23a219);
+            
+    
+            var popup_2a8988b7967441e5a3f231e4ca0499db = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_ea49ca4246ca4b469a872c7d519421a1 = $('<div id="html_ea49ca4246ca4b469a872c7d519421a1" style="width: 100.0%; height: 100.0%;">Residence Oasis: 17583 HKD per sq ft</div>')[0];
+                popup_2a8988b7967441e5a3f231e4ca0499db.setContent(html_ea49ca4246ca4b469a872c7d519421a1);
+            
+
+            circle_407c1d6156df4517ae47532708635db8.bindPopup(popup_2a8988b7967441e5a3f231e4ca0499db)
+            ;
+
+            
+        
+    
+
+            var circle_69f38783d7b94b27ba225376aa0cfddf = L.circle(
+                [22.3810329, 114.194676],
+                {
+  "bubblingMouseEvents": true, 
+  "color": "#FF0033", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": true, 
+  "fillColor": "#FF0033", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "opacity": 0.89, 
+  "radius": 767, 
+  "stroke": true, 
+  "weight": 1
+}
+                )
+                .addTo(map_13cc1119887741afa21d6adf2c23a219);
+            
+    
+            var popup_ef837d60872e4e95ad451e611f782e53 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_8dadc762d2454a53913ae5004ea05657 = $('<div id="html_8dadc762d2454a53913ae5004ea05657" style="width: 100.0%; height: 100.0%;">Garden Rivera: 19183 HKD per sq ft</div>')[0];
+                popup_ef837d60872e4e95ad451e611f782e53.setContent(html_8dadc762d2454a53913ae5004ea05657);
+            
+
+            circle_69f38783d7b94b27ba225376aa0cfddf.bindPopup(popup_ef837d60872e4e95ad451e611f782e53)
+            ;
+
+            
+        
+    
+
+            var circle_714a5b954b944b8fb6bd0a8d85dd5c7c = L.circle(
+                [22.3076654, 114.1922459],
+                {
+  "bubblingMouseEvents": true, 
+  "color": "#FF0033", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": true, 
+  "fillColor": "#FF0033", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "opacity": 0.89, 
+  "radius": 764, 
+  "stroke": true, 
+  "weight": 1
+}
+                )
+                .addTo(map_13cc1119887741afa21d6adf2c23a219);
+            
+    
+            var popup_7e9e2d55eeef4bd99b4c500216e1c91f = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_29d8becce3944ace8134f140cc1f430b = $('<div id="html_29d8becce3944ace8134f140cc1f430b" style="width: 100.0%; height: 100.0%;">Laguna Verde: 19103 HKD per sq ft</div>')[0];
+                popup_7e9e2d55eeef4bd99b4c500216e1c91f.setContent(html_29d8becce3944ace8134f140cc1f430b);
+            
+
+            circle_714a5b954b944b8fb6bd0a8d85dd5c7c.bindPopup(popup_7e9e2d55eeef4bd99b4c500216e1c91f)
+            ;
+
+            
+        
+    
+
+            var circle_d4f68345cb0b479fb4b86975970cb02a = L.circle(
+                [22.3447853, 114.107779],
+                {
+  "bubblingMouseEvents": true, 
+  "color": "#FF6633", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": true, 
+  "fillColor": "#FF6633", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "opacity": 0.89, 
+  "radius": 526, 
+  "stroke": true, 
+  "weight": 1
+}
+                )
+                .addTo(map_13cc1119887741afa21d6adf2c23a219);
+            
+    
+            var popup_9990d150f7194798b3311189d5b0d00b = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_546fd65a4578419993256b04938b3fe2 = $('<div id="html_546fd65a4578419993256b04938b3fe2" style="width: 100.0%; height: 100.0%;">Mayfair Gardens: 13167 HKD per sq ft</div>')[0];
+                popup_9990d150f7194798b3311189d5b0d00b.setContent(html_546fd65a4578419993256b04938b3fe2);
+            
+
+            circle_d4f68345cb0b479fb4b86975970cb02a.bindPopup(popup_9990d150f7194798b3311189d5b0d00b)
+            ;
+
+            
+        
+    
+
+            var circle_695d9d7705d24e55a3d560e1038139ce = L.circle(
+                [22.3270075, 114.2139393],
+                {
+  "bubblingMouseEvents": true, 
+  "color": "#FF0033", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": true, 
+  "fillColor": "#FF0033", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "opacity": 0.89, 
+  "radius": 727, 
+  "stroke": true, 
+  "weight": 1
+}
+                )
+                .addTo(map_13cc1119887741afa21d6adf2c23a219);
+            
+    
+            var popup_bbb0b5b45664461d99a505824074e691 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_b99f5b1146e74886a91b08ebfcb9fb1f = $('<div id="html_b99f5b1146e74886a91b08ebfcb9fb1f" style="width: 100.0%; height: 100.0%;">Tak Bo Garden: 18182 HKD per sq ft</div>')[0];
+                popup_bbb0b5b45664461d99a505824074e691.setContent(html_b99f5b1146e74886a91b08ebfcb9fb1f);
+            
+
+            circle_695d9d7705d24e55a3d560e1038139ce.bindPopup(popup_bbb0b5b45664461d99a505824074e691)
+            ;
+
+            
+        
+    
+
+            var circle_32890727d09a4893afb909b0aacac04a = L.circle(
+                [999.0, 999.0],
+                {
+  "bubblingMouseEvents": true, 
+  "color": "#FF6633", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": true, 
+  "fillColor": "#FF6633", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "opacity": 0.89, 
+  "radius": 513, 
+  "stroke": true, 
+  "weight": 1
+}
+                )
+                .addTo(map_13cc1119887741afa21d6adf2c23a219);
+            
+    
+            var popup_5209f8ebfe5847f7b290b4913bff7aa5 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_b44a48c927554e49a292289fe8dbb730 = $('<div id="html_b44a48c927554e49a292289fe8dbb730" style="width: 100.0%; height: 100.0%;">Belvedere Garden: 12833 HKD per sq ft</div>')[0];
+                popup_5209f8ebfe5847f7b290b4913bff7aa5.setContent(html_b44a48c927554e49a292289fe8dbb730);
+            
+
+            circle_32890727d09a4893afb909b0aacac04a.bindPopup(popup_5209f8ebfe5847f7b290b4913bff7aa5)
+            ;
+
+            
+        
+    
+
+            var circle_b464d6023a604f558674bc6ca013fb7f = L.circle(
+                [22.3232044, 114.2537577],
+                {
+  "bubblingMouseEvents": true, 
+  "color": "#FF6633", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": true, 
+  "fillColor": "#FF6633", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "opacity": 0.89, 
+  "radius": 594, 
+  "stroke": true, 
+  "weight": 1
+}
+                )
+                .addTo(map_13cc1119887741afa21d6adf2c23a219);
+            
+    
+            var popup_a43da42a00c34982b07b259646ffcbfb = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_de7d669a7d0d44f4ba204aba1d9a9065 = $('<div id="html_de7d669a7d0d44f4ba204aba1d9a9065" style="width: 100.0%; height: 100.0%;">Well On Garden: 14863 HKD per sq ft</div>')[0];
+                popup_a43da42a00c34982b07b259646ffcbfb.setContent(html_de7d669a7d0d44f4ba204aba1d9a9065);
+            
+
+            circle_b464d6023a604f558674bc6ca013fb7f.bindPopup(popup_a43da42a00c34982b07b259646ffcbfb)
+            ;
+
+            
+        
+    
+
+            var circle_3e257b019c7e43f6b3e71905d9779f09 = L.circle(
+                [22.3287648, 114.2072985],
+                {
+  "bubblingMouseEvents": true, 
+  "color": "#FF6633", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": true, 
+  "fillColor": "#FF6633", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "opacity": 0.89, 
+  "radius": 553, 
+  "stroke": true, 
+  "weight": 1
+}
+                )
+                .addTo(map_13cc1119887741afa21d6adf2c23a219);
+            
+    
+            var popup_042edb5e75b2438e946de104e2888997 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_03a6ecdb62d943a09a26ab721ac127d8 = $('<div id="html_03a6ecdb62d943a09a26ab721ac127d8" style="width: 100.0%; height: 100.0%;">Richland Gardens: 13836 HKD per sq ft</div>')[0];
+                popup_042edb5e75b2438e946de104e2888997.setContent(html_03a6ecdb62d943a09a26ab721ac127d8);
+            
+
+            circle_3e257b019c7e43f6b3e71905d9779f09.bindPopup(popup_042edb5e75b2438e946de104e2888997)
+            ;
+
+            
+        
+    
+
+            var circle_79101d95734049a98c7da15dc87cf69b = L.circle(
+                [999.0, 999.0],
+                {
+  "bubblingMouseEvents": true, 
+  "color": "#FF6633", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": true, 
+  "fillColor": "#FF6633", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "opacity": 0.89, 
+  "radius": 478, 
+  "stroke": true, 
+  "weight": 1
+}
+                )
+                .addTo(map_13cc1119887741afa21d6adf2c23a219);
+            
+    
+            var popup_b894da595c9f4035bc8eeee13b03aa6e = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_93334bdfce6240c2a5fbf1960ce60661 = $('<div id="html_93334bdfce6240c2a5fbf1960ce60661" style="width: 100.0%; height: 100.0%;">Tai Hing Gardens: 11953 HKD per sq ft</div>')[0];
+                popup_b894da595c9f4035bc8eeee13b03aa6e.setContent(html_93334bdfce6240c2a5fbf1960ce60661);
+            
+
+            circle_79101d95734049a98c7da15dc87cf69b.bindPopup(popup_b894da595c9f4035bc8eeee13b03aa6e)
+            ;
+
+            
+        
+    
+
+            var circle_78f4121a26f949c4a56b2edbaa2d6f02 = L.circle(
+                [999.0, 999.0],
+                {
+  "bubblingMouseEvents": true, 
+  "color": "#FF0033", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": true, 
+  "fillColor": "#FF0033", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "opacity": 0.89, 
+  "radius": 609, 
+  "stroke": true, 
+  "weight": 1
+}
+                )
+                .addTo(map_13cc1119887741afa21d6adf2c23a219);
+            
+    
+            var popup_db3731ea0ba84164955a0cdc466d72a3 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_df386f935f8c4866873c479c114aef91 = $('<div id="html_df386f935f8c4866873c479c114aef91" style="width: 100.0%; height: 100.0%;">Serenity Park: 15247 HKD per sq ft</div>')[0];
+                popup_db3731ea0ba84164955a0cdc466d72a3.setContent(html_df386f935f8c4866873c479c114aef91);
+            
+
+            circle_78f4121a26f949c4a56b2edbaa2d6f02.bindPopup(popup_db3731ea0ba84164955a0cdc466d72a3)
+            ;
+
+            
+        
+    
+
+            var circle_b3de36c711dc4b75a684e734206f035b = L.circle(
+                [22.31349, 114.240501],
+                {
+  "bubblingMouseEvents": true, 
+  "color": "#FF6633", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": true, 
+  "fillColor": "#FF6633", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "opacity": 0.89, 
+  "radius": 536, 
+  "stroke": true, 
+  "weight": 1
+}
+                )
+                .addTo(map_13cc1119887741afa21d6adf2c23a219);
+            
+    
+            var popup_d9d93dfec7a04bd88c715eb055fbfb59 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_8e917b16046f4dc9926aa8cc76157aba = $('<div id="html_8e917b16046f4dc9926aa8cc76157aba" style="width: 100.0%; height: 100.0%;">Hong Wah Court: 13424 HKD per sq ft</div>')[0];
+                popup_d9d93dfec7a04bd88c715eb055fbfb59.setContent(html_8e917b16046f4dc9926aa8cc76157aba);
+            
+
+            circle_b3de36c711dc4b75a684e734206f035b.bindPopup(popup_d9d93dfec7a04bd88c715eb055fbfb59)
+            ;
+
+            
+        
+    
+
+            var circle_df2dafe078bf4faa81937e460c52fa16 = L.circle(
+                [22.2832653, 114.2134012],
+                {
+  "bubblingMouseEvents": true, 
+  "color": "#FF0033", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": true, 
+  "fillColor": "#FF0033", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "opacity": 0.89, 
+  "radius": 704, 
+  "stroke": true, 
+  "weight": 1
+}
+                )
+                .addTo(map_13cc1119887741afa21d6adf2c23a219);
+            
+    
+            var popup_ed0026ce930b4e7aaec0e1285237c3a8 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_d5c26d8156e048c18e4190db68596c89 = $('<div id="html_d5c26d8156e048c18e4190db68596c89" style="width: 100.0%; height: 100.0%;">Nan Fung Sun Chuen: 17610 HKD per sq ft</div>')[0];
+                popup_ed0026ce930b4e7aaec0e1285237c3a8.setContent(html_d5c26d8156e048c18e4190db68596c89);
+            
+
+            circle_df2dafe078bf4faa81937e460c52fa16.bindPopup(popup_ed0026ce930b4e7aaec0e1285237c3a8)
+            ;
+
+            
+        
+    
+
+            var circle_68077af1c83b46ec80dc200449e7a9ec = L.circle(
+                [22.436801, 114.0294668],
+                {
+  "bubblingMouseEvents": true, 
+  "color": "#FF6633", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": true, 
+  "fillColor": "#FF6633", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "opacity": 0.89, 
+  "radius": 455, 
+  "stroke": true, 
+  "weight": 1
+}
+                )
+                .addTo(map_13cc1119887741afa21d6adf2c23a219);
+            
+    
+            var popup_f19e506e754a48a69beb06c9a8cc5140 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_28ab9aebf4984b3abd41e57eadfd480b = $('<div id="html_28ab9aebf4984b3abd41e57eadfd480b" style="width: 100.0%; height: 100.0%;">Sereno Verde: 11392 HKD per sq ft</div>')[0];
+                popup_f19e506e754a48a69beb06c9a8cc5140.setContent(html_28ab9aebf4984b3abd41e57eadfd480b);
+            
+
+            circle_68077af1c83b46ec80dc200449e7a9ec.bindPopup(popup_f19e506e754a48a69beb06c9a8cc5140)
+            ;
+
+            
+        
+    
+
+            var circle_a146c51d4963406ba5c1cf55379c26e9 = L.circle(
+                [22.4125776, 114.2221838],
+                {
+  "bubblingMouseEvents": true, 
+  "color": "#FF6633", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": true, 
+  "fillColor": "#FF6633", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "opacity": 0.89, 
+  "radius": 599, 
+  "stroke": true, 
+  "weight": 1
+}
+                )
+                .addTo(map_13cc1119887741afa21d6adf2c23a219);
+            
+    
+            var popup_1b684ff4dd374dc2af25e2665f8fbeea = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_fffe7760f0af4bc89cea1c7efdd4abe3 = $('<div id="html_fffe7760f0af4bc89cea1c7efdd4abe3" style="width: 100.0%; height: 100.0%;">Sausalito: 14983 HKD per sq ft</div>')[0];
+                popup_1b684ff4dd374dc2af25e2665f8fbeea.setContent(html_fffe7760f0af4bc89cea1c7efdd4abe3);
+            
+
+            circle_a146c51d4963406ba5c1cf55379c26e9.bindPopup(popup_1b684ff4dd374dc2af25e2665f8fbeea)
+            ;
+
+            
+        
+    
+
+            var circle_96ae2d6b63484faf9d917b929802ae35 = L.circle(
+                [22.28476, 114.22423],
+                {
+  "bubblingMouseEvents": true, 
+  "color": "#FF0033", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": true, 
+  "fillColor": "#FF0033", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "opacity": 0.89, 
+  "radius": 999, 
+  "stroke": true, 
+  "weight": 1
+}
+                )
+                .addTo(map_13cc1119887741afa21d6adf2c23a219);
+            
+    
+            var popup_881d02c1b3fb4bf0bcb6e0ce91d1f079 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_18b2f78e5e13423e833c8713207dded4 = $('<div id="html_18b2f78e5e13423e833c8713207dded4" style="width: 100.0%; height: 100.0%;">Grand Promenade: 24997 HKD per sq ft</div>')[0];
+                popup_881d02c1b3fb4bf0bcb6e0ce91d1f079.setContent(html_18b2f78e5e13423e833c8713207dded4);
+            
+
+            circle_96ae2d6b63484faf9d917b929802ae35.bindPopup(popup_881d02c1b3fb4bf0bcb6e0ce91d1f079)
+            ;
+
+            
+        
+    
+
+            var circle_c7f6252efc494a7b9de44cad4d60f0e8 = L.circle(
+                [999.0, 999.0],
+                {
+  "bubblingMouseEvents": true, 
+  "color": "#FF0033", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": true, 
+  "fillColor": "#FF0033", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "opacity": 0.89, 
+  "radius": 753, 
+  "stroke": true, 
+  "weight": 1
+}
+                )
+                .addTo(map_13cc1119887741afa21d6adf2c23a219);
+            
+    
+            var popup_eedf52f6a65b443baf5e0e09c121e9bd = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_a1daa41d529e4d20b34a7e9b0fd5a980 = $('<div id="html_a1daa41d529e4d20b34a7e9b0fd5a980" style="width: 100.0%; height: 100.0%;">Liberte: 18836 HKD per sq ft</div>')[0];
+                popup_eedf52f6a65b443baf5e0e09c121e9bd.setContent(html_a1daa41d529e4d20b34a7e9b0fd5a980);
+            
+
+            circle_c7f6252efc494a7b9de44cad4d60f0e8.bindPopup(popup_eedf52f6a65b443baf5e0e09c121e9bd)
+            ;
+
+            
+        
+    
+
+            var circle_f3a98236cd1c418a8cf6d5d1acbbca7a = L.circle(
+                [22.3749476, 114.1128735],
+                {
+  "bubblingMouseEvents": true, 
+  "color": "#FF6633", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": true, 
+  "fillColor": "#FF6633", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "opacity": 0.89, 
+  "radius": 588, 
+  "stroke": true, 
+  "weight": 1
+}
+                )
+                .addTo(map_13cc1119887741afa21d6adf2c23a219);
+            
+    
+            var popup_f5bf65eff1fa4e1e999f80fafc05b0c1 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_f1884e97bb804207aaa14289bd79edc2 = $('<div id="html_f1884e97bb804207aaa14289bd79edc2" style="width: 100.0%; height: 100.0%;">Discovery Park: 14706 HKD per sq ft</div>')[0];
+                popup_f5bf65eff1fa4e1e999f80fafc05b0c1.setContent(html_f1884e97bb804207aaa14289bd79edc2);
+            
+
+            circle_f3a98236cd1c418a8cf6d5d1acbbca7a.bindPopup(popup_f5bf65eff1fa4e1e999f80fafc05b0c1)
+            ;
+
+            
+        
+    
+
+            var circle_4e6727c17788417aa9233a7f016a253a = L.circle(
+                [22.4363805, 114.0321572],
+                {
+  "bubblingMouseEvents": true, 
+  "color": "#FF6633", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": true, 
+  "fillColor": "#FF6633", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "opacity": 0.89, 
+  "radius": 535, 
+  "stroke": true, 
+  "weight": 1
+}
+                )
+                .addTo(map_13cc1119887741afa21d6adf2c23a219);
+            
+    
+            var popup_b27931cfda01434d9b69eb9e7ae1157e = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_4b51784e843c490ea7f380024d08a995 = $('<div id="html_4b51784e843c490ea7f380024d08a995" style="width: 100.0%; height: 100.0%;">The Reach: 13381 HKD per sq ft</div>')[0];
+                popup_b27931cfda01434d9b69eb9e7ae1157e.setContent(html_4b51784e843c490ea7f380024d08a995);
+            
+
+            circle_4e6727c17788417aa9233a7f016a253a.bindPopup(popup_b27931cfda01434d9b69eb9e7ae1157e)
+            ;
+
+            
+        
+    
+
+            var circle_9874fb73fc6144deaa5402870ca0a4d0 = L.circle(
+                [22.3242203, 114.2569568],
+                {
+  "bubblingMouseEvents": true, 
+  "color": "#FF0033", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": true, 
+  "fillColor": "#FF0033", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "opacity": 0.89, 
+  "radius": 686, 
+  "stroke": true, 
+  "weight": 1
+}
+                )
+                .addTo(map_13cc1119887741afa21d6adf2c23a219);
+            
+    
+            var popup_c3adee56b8444f88afc4f5ed7643e29d = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_716dcbe4e27d4df1b5516be04d2a6cae = $('<div id="html_716dcbe4e27d4df1b5516be04d2a6cae" style="width: 100.0%; height: 100.0%;">Metro City: 17161 HKD per sq ft</div>')[0];
+                popup_c3adee56b8444f88afc4f5ed7643e29d.setContent(html_716dcbe4e27d4df1b5516be04d2a6cae);
+            
+
+            circle_9874fb73fc6144deaa5402870ca0a4d0.bindPopup(popup_c3adee56b8444f88afc4f5ed7643e29d)
+            ;
+
+            
+        
+    
+
+            var circle_626846a87fc84b6bbf2934fd3b75b174 = L.circle(
+                [22.5008668, 114.1461906],
+                {
+  "bubblingMouseEvents": true, 
+  "color": "#FF6633", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": true, 
+  "fillColor": "#FF6633", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "opacity": 0.89, 
+  "radius": 556, 
+  "stroke": true, 
+  "weight": 1
+}
+                )
+                .addTo(map_13cc1119887741afa21d6adf2c23a219);
+            
+    
+            var popup_3e517a187fbd49a2aaac80e2a1df8ce9 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_9e18acdd387644599385b0c3e2525b07 = $('<div id="html_9e18acdd387644599385b0c3e2525b07" style="width: 100.0%; height: 100.0%;">Green Code: 13917 HKD per sq ft</div>')[0];
+                popup_3e517a187fbd49a2aaac80e2a1df8ce9.setContent(html_9e18acdd387644599385b0c3e2525b07);
+            
+
+            circle_626846a87fc84b6bbf2934fd3b75b174.bindPopup(popup_3e517a187fbd49a2aaac80e2a1df8ce9)
+            ;
+
+            
+        
+    
+
+            var circle_61caf7ced3af4ce0881277d8635b21bb = L.circle(
+                [22.3248197, 114.1616552],
+                {
+  "bubblingMouseEvents": true, 
+  "color": "#FF0033", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": true, 
+  "fillColor": "#FF0033", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "opacity": 0.89, 
+  "radius": 808, 
+  "stroke": true, 
+  "weight": 1
+}
+                )
+                .addTo(map_13cc1119887741afa21d6adf2c23a219);
+            
+    
+            var popup_85fe706d368a4b8b87122efc91298e24 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_e7b616406e014dde9d66301566673a37 = $('<div id="html_e7b616406e014dde9d66301566673a37" style="width: 100.0%; height: 100.0%;">Metro Harbour View: 20209 HKD per sq ft</div>')[0];
+                popup_85fe706d368a4b8b87122efc91298e24.setContent(html_e7b616406e014dde9d66301566673a37);
+            
+
+            circle_61caf7ced3af4ce0881277d8635b21bb.bindPopup(popup_85fe706d368a4b8b87122efc91298e24)
+            ;
+
+            
+        
+    
+
+            var circle_03d0726cc3ee471d82bea7b216959256 = L.circle(
+                [22.3968234, 114.1995191],
+                {
+  "bubblingMouseEvents": true, 
+  "color": "#FF6633", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": true, 
+  "fillColor": "#FF6633", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "opacity": 0.89, 
+  "radius": 585, 
+  "stroke": true, 
+  "weight": 1
+}
+                )
+                .addTo(map_13cc1119887741afa21d6adf2c23a219);
+            
+    
+            var popup_280b3e709e4b4e93905b9dc678be6e45 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_ed171c894deb4a55ae32014d5b7a7621 = $('<div id="html_ed171c894deb4a55ae32014d5b7a7621" style="width: 100.0%; height: 100.0%;">Jubilee Garden: 14648 HKD per sq ft</div>')[0];
+                popup_280b3e709e4b4e93905b9dc678be6e45.setContent(html_ed171c894deb4a55ae32014d5b7a7621);
+            
+
+            circle_03d0726cc3ee471d82bea7b216959256.bindPopup(popup_280b3e709e4b4e93905b9dc678be6e45)
+            ;
+
+            
+        
+    
+
+            var circle_90b1dd8be391409eafa6d88ea29dceaa = L.circle(
+                [999.0, 999.0],
+                {
+  "bubblingMouseEvents": true, 
+  "color": "#FF0033", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": true, 
+  "fillColor": "#FF0033", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "opacity": 0.89, 
+  "radius": 651, 
+  "stroke": true, 
+  "weight": 1
+}
+                )
+                .addTo(map_13cc1119887741afa21d6adf2c23a219);
+            
+    
+            var popup_7e19db4c01674cd68c9c9b04ccad5b33 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_5dabb258f5a0433ea53bb1f9f223fb14 = $('<div id="html_5dabb258f5a0433ea53bb1f9f223fb14" style="width: 100.0%; height: 100.0%;">Shatin New Town (Lucky Plaza): 16287 HKD per sq ft</div>')[0];
+                popup_7e19db4c01674cd68c9c9b04ccad5b33.setContent(html_5dabb258f5a0433ea53bb1f9f223fb14);
+            
+
+            circle_90b1dd8be391409eafa6d88ea29dceaa.bindPopup(popup_7e19db4c01674cd68c9c9b04ccad5b33)
+            ;
+
+            
+        
+    
+
+            var circle_de22775473ae40fabf02567bf96c3bac = L.circle(
+                [22.28418, 114.22347],
+                {
+  "bubblingMouseEvents": true, 
+  "color": "#FF0033", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": true, 
+  "fillColor": "#FF0033", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "opacity": 0.89, 
+  "radius": 773, 
+  "stroke": true, 
+  "weight": 1
+}
+                )
+                .addTo(map_13cc1119887741afa21d6adf2c23a219);
+            
+    
+            var popup_49de9438e91e4262bd21ab04cb8bc884 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_2b7656a9aba5426d8d64d9ea41f4dfb6 = $('<div id="html_2b7656a9aba5426d8d64d9ea41f4dfb6" style="width: 100.0%; height: 100.0%;">Lei King Wan: 19338 HKD per sq ft</div>')[0];
+                popup_49de9438e91e4262bd21ab04cb8bc884.setContent(html_2b7656a9aba5426d8d64d9ea41f4dfb6);
+            
+
+            circle_de22775473ae40fabf02567bf96c3bac.bindPopup(popup_49de9438e91e4262bd21ab04cb8bc884)
+            ;
+
+            
+        
+    
+
+            var circle_ca7741dd4ba44ab8b381d4a5e2abe631 = L.circle(
+                [22.3894078, 114.2032051],
+                {
+  "bubblingMouseEvents": true, 
+  "color": "#FF0033", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": true, 
+  "fillColor": "#FF0033", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "opacity": 0.89, 
+  "radius": 705, 
+  "stroke": true, 
+  "weight": 1
+}
+                )
+                .addTo(map_13cc1119887741afa21d6adf2c23a219);
+            
+    
+            var popup_e00c6320668246a58d810138bf505e1b = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_d45c5eb246d845679b75d8d7b97a2005 = $('<div id="html_d45c5eb246d845679b75d8d7b97a2005" style="width: 100.0%; height: 100.0%;">City One Shatin: 17627 HKD per sq ft</div>')[0];
+                popup_e00c6320668246a58d810138bf505e1b.setContent(html_d45c5eb246d845679b75d8d7b97a2005);
+            
+
+            circle_ca7741dd4ba44ab8b381d4a5e2abe631.bindPopup(popup_e00c6320668246a58d810138bf505e1b)
+            ;
+
+            
+        
+    
+
+            var circle_534c5c4cbac94812b5e8933b2a457849 = L.circle(
+                [22.3578982, 114.1057858],
+                {
+  "bubblingMouseEvents": true, 
+  "color": "#FF0033", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": true, 
+  "fillColor": "#FF0033", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "opacity": 0.89, 
+  "radius": 721, 
+  "stroke": true, 
+  "weight": 1
+}
+                )
+                .addTo(map_13cc1119887741afa21d6adf2c23a219);
+            
+    
+            var popup_570ebae7c1f44d7eabccb7188a9ac6c7 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_3d13e47d14934e24815601d80c32b1ac = $('<div id="html_3d13e47d14934e24815601d80c32b1ac" style="width: 100.0%; height: 100.0%;">Tierra Verde: 18029 HKD per sq ft</div>')[0];
+                popup_570ebae7c1f44d7eabccb7188a9ac6c7.setContent(html_3d13e47d14934e24815601d80c32b1ac);
+            
+
+            circle_534c5c4cbac94812b5e8933b2a457849.bindPopup(popup_570ebae7c1f44d7eabccb7188a9ac6c7)
+            ;
+
+            
+        
+    
+
+            var circle_0a83dd741c1649b895927a8b9fa7d550 = L.circle(
+                [22.2973688, 114.016528],
+                {
+  "bubblingMouseEvents": true, 
+  "color": "#FF6633", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": true, 
+  "fillColor": "#FF6633", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "opacity": 0.89, 
+  "radius": 466, 
+  "stroke": true, 
+  "weight": 1
+}
+                )
+                .addTo(map_13cc1119887741afa21d6adf2c23a219);
+            
+    
+            var popup_05af6b0cad794703aaf0f331402db5c7 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_1d4820ea86fd4944b9f05f7c2618c18b = $('<div id="html_1d4820ea86fd4944b9f05f7c2618c18b" style="width: 100.0%; height: 100.0%;">Discovery Bay: 11650 HKD per sq ft</div>')[0];
+                popup_05af6b0cad794703aaf0f331402db5c7.setContent(html_1d4820ea86fd4944b9f05f7c2618c18b);
+            
+
+            circle_0a83dd741c1649b895927a8b9fa7d550.bindPopup(popup_05af6b0cad794703aaf0f331402db5c7)
+            ;
+
+            
+        
+    
+
+            var circle_09106118fe4c4b1e95205e797ce4780f = L.circle(
+                [22.3772532, 114.1040701],
+                {
+  "bubblingMouseEvents": true, 
+  "color": "#FF6633", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": true, 
+  "fillColor": "#FF6633", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "opacity": 0.89, 
+  "radius": 448, 
+  "stroke": true, 
+  "weight": 1
+}
+                )
+                .addTo(map_13cc1119887741afa21d6adf2c23a219);
+            
+    
+            var popup_79d2ce854d5645198075dda0289b90ea = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_9577cd26703e4431b06afd6a68245602 = $('<div id="html_9577cd26703e4431b06afd6a68245602" style="width: 100.0%; height: 100.0%;">Allway Gardens: 11222 HKD per sq ft</div>')[0];
+                popup_79d2ce854d5645198075dda0289b90ea.setContent(html_9577cd26703e4431b06afd6a68245602);
+            
+
+            circle_09106118fe4c4b1e95205e797ce4780f.bindPopup(popup_79d2ce854d5645198075dda0289b90ea)
+            ;
+
+            
+        
+    
+
+            var circle_50e0db37a8b24e908afabd6ffa33fb73 = L.circle(
+                [22.3518739, 114.1074389],
+                {
+  "bubblingMouseEvents": true, 
+  "color": "#FF0033", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": true, 
+  "fillColor": "#FF0033", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "opacity": 0.89, 
+  "radius": 619, 
+  "stroke": true, 
+  "weight": 1
+}
+                )
+                .addTo(map_13cc1119887741afa21d6adf2c23a219);
+            
+    
+            var popup_a99b835d0e5e4aaca9ceff38096ffe9b = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_5f17c68be7694ae3a64190cd928ffbd8 = $('<div id="html_5f17c68be7694ae3a64190cd928ffbd8" style="width: 100.0%; height: 100.0%;">Greenfield Garden: 15491 HKD per sq ft</div>')[0];
+                popup_a99b835d0e5e4aaca9ceff38096ffe9b.setContent(html_5f17c68be7694ae3a64190cd928ffbd8);
+            
+
+            circle_50e0db37a8b24e908afabd6ffa33fb73.bindPopup(popup_a99b835d0e5e4aaca9ceff38096ffe9b)
+            ;
+
+            
+        
+    
+
+            var circle_d32685cba79f477498151968622633f6 = L.circle(
+                [22.3927646, 114.1945563],
+                {
+  "bubblingMouseEvents": true, 
+  "color": "#FF6633", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": true, 
+  "fillColor": "#FF6633", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "opacity": 0.89, 
+  "radius": 422, 
+  "stroke": true, 
+  "weight": 1
+}
+                )
+                .addTo(map_13cc1119887741afa21d6adf2c23a219);
+            
+    
+            var popup_53cbf76bba5243008c3d36780c98bd50 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_9a90241355534c7aabea67093c09b6cc = $('<div id="html_9a90241355534c7aabea67093c09b6cc" style="width: 100.0%; height: 100.0%;">Sui Wo Court: 10568 HKD per sq ft</div>')[0];
+                popup_53cbf76bba5243008c3d36780c98bd50.setContent(html_9a90241355534c7aabea67093c09b6cc);
+            
+
+            circle_d32685cba79f477498151968622633f6.bindPopup(popup_53cbf76bba5243008c3d36780c98bd50)
+            ;
+
+            
+        
+    
+
+            var circle_7d14848975774083aae6f36eb0ccf3dd = L.circle(
+                [22.3060784, 114.1869352],
+                {
+  "bubblingMouseEvents": true, 
+  "color": "#FF0033", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": true, 
+  "fillColor": "#FF0033", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "opacity": 0.89, 
+  "radius": 693, 
+  "stroke": true, 
+  "weight": 1
+}
+                )
+                .addTo(map_13cc1119887741afa21d6adf2c23a219);
+            
+    
+            var popup_8f052283e51f4cc59cddb2c259a87ce1 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_3185274d3be442ce83a3b424c0714b6e = $('<div id="html_3185274d3be442ce83a3b424c0714b6e" style="width: 100.0%; height: 100.0%;">Whampoa Estate: 17329 HKD per sq ft</div>')[0];
+                popup_8f052283e51f4cc59cddb2c259a87ce1.setContent(html_3185274d3be442ce83a3b424c0714b6e);
+            
+
+            circle_7d14848975774083aae6f36eb0ccf3dd.bindPopup(popup_8f052283e51f4cc59cddb2c259a87ce1)
+            ;
+
+            
+        
+    
+
+            var circle_095b22cb2f374333b9c7b6508829e1ea = L.circle(
+                [22.3612374, 114.1054246],
+                {
+  "bubblingMouseEvents": true, 
+  "color": "#FF0033", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": true, 
+  "fillColor": "#FF0033", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "opacity": 0.89, 
+  "radius": 685, 
+  "stroke": true, 
+  "weight": 1
+}
+                )
+                .addTo(map_13cc1119887741afa21d6adf2c23a219);
+            
+    
+            var popup_e07effa1bd03403ab8f139391edab7a8 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_71b1305261e24f52a46de84d1d0f25eb = $('<div id="html_71b1305261e24f52a46de84d1d0f25eb" style="width: 100.0%; height: 100.0%;">Villa Esplanada: 17134 HKD per sq ft</div>')[0];
+                popup_e07effa1bd03403ab8f139391edab7a8.setContent(html_71b1305261e24f52a46de84d1d0f25eb);
+            
+
+            circle_095b22cb2f374333b9c7b6508829e1ea.bindPopup(popup_e07effa1bd03403ab8f139391edab7a8)
+            ;
+
+            
+        
+    
+
+            var circle_0377f27fac4d4e67b09c2d3b7e25aaae = L.circle(
+                [22.3927238, 113.9769963],
+                {
+  "bubblingMouseEvents": true, 
+  "color": "#FF6633", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": true, 
+  "fillColor": "#FF6633", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "opacity": 0.89, 
+  "radius": 589, 
+  "stroke": true, 
+  "weight": 1
+}
+                )
+                .addTo(map_13cc1119887741afa21d6adf2c23a219);
+            
+    
+            var popup_76b9d2cb18084668aebcad8654477e67 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_1f19989caa334946bddca1e22afa94c7 = $('<div id="html_1f19989caa334946bddca1e22afa94c7" style="width: 100.0%; height: 100.0%;">Tuen Mun Town Plaza: 14736 HKD per sq ft</div>')[0];
+                popup_76b9d2cb18084668aebcad8654477e67.setContent(html_1f19989caa334946bddca1e22afa94c7);
+            
+
+            circle_0377f27fac4d4e67b09c2d3b7e25aaae.bindPopup(popup_76b9d2cb18084668aebcad8654477e67)
+            ;
+
+            
+        
+    
+
+            var circle_5cd76ab04cee417c861f699ee165ffcc = L.circle(
+                [22.4511444, 114.0320834],
+                {
+  "bubblingMouseEvents": true, 
+  "color": "#FF6633", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": true, 
+  "fillColor": "#FF6633", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "opacity": 0.89, 
+  "radius": 550, 
+  "stroke": true, 
+  "weight": 1
+}
+                )
+                .addTo(map_13cc1119887741afa21d6adf2c23a219);
+            
+    
+            var popup_51f2f052e5a941e8aaf4a2543a841a55 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_f008aad6109848ab912559fe4653594d = $('<div id="html_f008aad6109848ab912559fe4653594d" style="width: 100.0%; height: 100.0%;">The Parcville: 13755 HKD per sq ft</div>')[0];
+                popup_51f2f052e5a941e8aaf4a2543a841a55.setContent(html_f008aad6109848ab912559fe4653594d);
+            
+
+            circle_5cd76ab04cee417c861f699ee165ffcc.bindPopup(popup_51f2f052e5a941e8aaf4a2543a841a55)
+            ;
+
+            
+        
+    
+
+            var circle_e167210a8d1c41b99f7a9ab3f9ae31ef = L.circle(
+                [22.2959952, 113.9518846],
+                {
+  "bubblingMouseEvents": true, 
+  "color": "#FF6633", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": true, 
+  "fillColor": "#FF6633", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "opacity": 0.89, 
+  "radius": 545, 
+  "stroke": true, 
+  "weight": 1
+}
+                )
+                .addTo(map_13cc1119887741afa21d6adf2c23a219);
+            
+    
+            var popup_6c7c7fb65ed14205b7f8b3cac41f9400 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_2327901c946146ee93c7b1f45f957160 = $('<div id="html_2327901c946146ee93c7b1f45f957160" style="width: 100.0%; height: 100.0%;">The Visionary: 13634 HKD per sq ft</div>')[0];
+                popup_6c7c7fb65ed14205b7f8b3cac41f9400.setContent(html_2327901c946146ee93c7b1f45f957160);
+            
+
+            circle_e167210a8d1c41b99f7a9ab3f9ae31ef.bindPopup(popup_6c7c7fb65ed14205b7f8b3cac41f9400)
+            ;
+
+            
+        
+    
+
+            var circle_cf212de823a34ad69f94c3cc98b04e4b = L.circle(
+                [22.2932333, 113.9503158],
+                {
+  "bubblingMouseEvents": true, 
+  "color": "#FF6633", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": true, 
+  "fillColor": "#FF6633", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "opacity": 0.89, 
+  "radius": 497, 
+  "stroke": true, 
+  "weight": 1
+}
+                )
+                .addTo(map_13cc1119887741afa21d6adf2c23a219);
+            
+    
+            var popup_e5624f4152374c6296b21f40468abb67 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_b48c1755bd4f40c19f0319f665a73fa0 = $('<div id="html_b48c1755bd4f40c19f0319f665a73fa0" style="width: 100.0%; height: 100.0%;">Caribbean Coast: 12433 HKD per sq ft</div>')[0];
+                popup_e5624f4152374c6296b21f40468abb67.setContent(html_b48c1755bd4f40c19f0319f665a73fa0);
+            
+
+            circle_cf212de823a34ad69f94c3cc98b04e4b.bindPopup(popup_e5624f4152374c6296b21f40468abb67)
+            ;
+
+            
+        
+    
+
+            var circle_beaa4e29ff094fc0ad1dba9dfd3afd08 = L.circle(
+                [22.4642072, 114.1790774],
+                {
+  "bubblingMouseEvents": true, 
+  "color": "#FF6633", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": true, 
+  "fillColor": "#FF6633", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "opacity": 0.89, 
+  "radius": 591, 
+  "stroke": true, 
+  "weight": 1
+}
+                )
+                .addTo(map_13cc1119887741afa21d6adf2c23a219);
+            
+    
+            var popup_11087463ef894cb3a7ae465044c9c801 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_73c0d54b98624208808d2ed0b2948138 = $('<div id="html_73c0d54b98624208808d2ed0b2948138" style="width: 100.0%; height: 100.0%;">Mont Vert: 14787 HKD per sq ft</div>')[0];
+                popup_11087463ef894cb3a7ae465044c9c801.setContent(html_73c0d54b98624208808d2ed0b2948138);
+            
+
+            circle_beaa4e29ff094fc0ad1dba9dfd3afd08.bindPopup(popup_11087463ef894cb3a7ae465044c9c801)
+            ;
+
+            
+        
+    
+
+            var circle_3b4b9eec05024024814cdfc2d17a38ba = L.circle(
+                [999.0, 999.0],
+                {
+  "bubblingMouseEvents": true, 
+  "color": "#FF6633", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": true, 
+  "fillColor": "#FF6633", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "opacity": 0.89, 
+  "radius": 585, 
+  "stroke": true, 
+  "weight": 1
+}
+                )
+                .addTo(map_13cc1119887741afa21d6adf2c23a219);
+            
+    
+            var popup_9e5fabf0b888408d937c4574e9ba1eee = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_57f905ff8b7343c2b12085c65fb13c38 = $('<div id="html_57f905ff8b7343c2b12085c65fb13c38" style="width: 100.0%; height: 100.0%;">Mei Foo Sun Chuen: 14631 HKD per sq ft</div>')[0];
+                popup_9e5fabf0b888408d937c4574e9ba1eee.setContent(html_57f905ff8b7343c2b12085c65fb13c38);
+            
+
+            circle_3b4b9eec05024024814cdfc2d17a38ba.bindPopup(popup_9e5fabf0b888408d937c4574e9ba1eee)
+            ;
+
+            
+        
+    
+
+            var circle_d1abc7683dad4a29a0905ecc5bae205e = L.circle(
+                [22.4850963, 114.0536008],
+                {
+  "bubblingMouseEvents": true, 
+  "color": "#FF6633", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": true, 
+  "fillColor": "#FF6633", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "opacity": 0.89, 
+  "radius": 482, 
+  "stroke": true, 
+  "weight": 1
+}
+                )
+                .addTo(map_13cc1119887741afa21d6adf2c23a219);
+            
+    
+            var popup_a736bc4ae29247f7bdd889eb97c56597 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_4b71ccd9abbd4e37a10854cc5df3d7db = $('<div id="html_4b71ccd9abbd4e37a10854cc5df3d7db" style="width: 100.0%; height: 100.0%;">Palm Springs: 12055 HKD per sq ft</div>')[0];
+                popup_a736bc4ae29247f7bdd889eb97c56597.setContent(html_4b71ccd9abbd4e37a10854cc5df3d7db);
+            
+
+            circle_d1abc7683dad4a29a0905ecc5bae205e.bindPopup(popup_a736bc4ae29247f7bdd889eb97c56597)
+            ;
+
+            
+        
+    
+
+            var circle_a31f73b26ee14147a7c672b8eae06dbb = L.circle(
+                [22.3768174, 114.1061324],
+                {
+  "bubblingMouseEvents": true, 
+  "color": "#FF6633", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": true, 
+  "fillColor": "#FF6633", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "opacity": 0.89, 
+  "radius": 592, 
+  "stroke": true, 
+  "weight": 1
+}
+                )
+                .addTo(map_13cc1119887741afa21d6adf2c23a219);
+            
+    
+            var popup_4a76bdd24ac341b38de2b40882eb0a05 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_f0c7efe0a1ad4375ae1f91919fda7055 = $('<div id="html_f0c7efe0a1ad4375ae1f91919fda7055" style="width: 100.0%; height: 100.0%;">Tsuen Tak Gardens: 14802 HKD per sq ft</div>')[0];
+                popup_4a76bdd24ac341b38de2b40882eb0a05.setContent(html_f0c7efe0a1ad4375ae1f91919fda7055);
+            
+
+            circle_a31f73b26ee14147a7c672b8eae06dbb.bindPopup(popup_4a76bdd24ac341b38de2b40882eb0a05)
+            ;
+
+            
+        
+    
+
+            var circle_7012f30e50344726b6706c4d90edc611 = L.circle(
+                [22.4193218, 113.9847913],
+                {
+  "bubblingMouseEvents": true, 
+  "color": "#FF6633", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": true, 
+  "fillColor": "#FF6633", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "opacity": 0.89, 
+  "radius": 500, 
+  "stroke": true, 
+  "weight": 1
+}
+                )
+                .addTo(map_13cc1119887741afa21d6adf2c23a219);
+            
+    
+            var popup_95621d7394f44cbfb2a83d402f1caf6a = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_a5c3322a11874feba865b9fd146746de = $('<div id="html_a5c3322a11874feba865b9fd146746de" style="width: 100.0%; height: 100.0%;">The Sherwood: 12511 HKD per sq ft</div>')[0];
+                popup_95621d7394f44cbfb2a83d402f1caf6a.setContent(html_a5c3322a11874feba865b9fd146746de);
+            
+
+            circle_7012f30e50344726b6706c4d90edc611.bindPopup(popup_95621d7394f44cbfb2a83d402f1caf6a)
+            ;
+
+            
+        
+    
+
+            var circle_4cb4fb130e0c468cab0d6b71fe02ee05 = L.circle(
+                [22.3080002, 114.2623094],
+                {
+  "bubblingMouseEvents": true, 
+  "color": "#FF0033", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": true, 
+  "fillColor": "#FF0033", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "opacity": 0.89, 
+  "radius": 716, 
+  "stroke": true, 
+  "weight": 1
+}
+                )
+                .addTo(map_13cc1119887741afa21d6adf2c23a219);
+            
+    
+            var popup_19d9cfee22c844479d5323560506916e = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_2608d042cd334633b3942f28ecf792ed = $('<div id="html_2608d042cd334633b3942f28ecf792ed" style="width: 100.0%; height: 100.0%;">Tseung Kwan O Plaza: 17901 HKD per sq ft</div>')[0];
+                popup_19d9cfee22c844479d5323560506916e.setContent(html_2608d042cd334633b3942f28ecf792ed);
+            
+
+            circle_4cb4fb130e0c468cab0d6b71fe02ee05.bindPopup(popup_19d9cfee22c844479d5323560506916e)
+            ;
+
+            
+        
+    
+
+            var circle_f479f171b88e4557b8c37714d1862594 = L.circle(
+                [999.0, 999.0],
+                {
+  "bubblingMouseEvents": true, 
+  "color": "#FFCC33", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": true, 
+  "fillColor": "#FFCC33", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "opacity": 0.89, 
+  "radius": 390, 
+  "stroke": true, 
+  "weight": 1
+}
+                )
+                .addTo(map_13cc1119887741afa21d6adf2c23a219);
+            
+    
+            var popup_38e0d2c75870438c800b2c3ced2b1345 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_09cd75392cd94acda298c8e09f0f61da = $('<div id="html_09cd75392cd94acda298c8e09f0f61da" style="width: 100.0%; height: 100.0%;">Hongkong Garden: 9754 HKD per sq ft</div>')[0];
+                popup_38e0d2c75870438c800b2c3ced2b1345.setContent(html_09cd75392cd94acda298c8e09f0f61da);
+            
+
+            circle_f479f171b88e4557b8c37714d1862594.bindPopup(popup_38e0d2c75870438c800b2c3ced2b1345)
+            ;
+
+            
+        
+    
+
+            var circle_d5665f5219a74c9ca2c928d20c207a57 = L.circle(
+                [22.4775134, 114.0459933],
+                {
+  "bubblingMouseEvents": true, 
+  "color": "#FF6633", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": true, 
+  "fillColor": "#FF6633", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "opacity": 0.89, 
+  "radius": 554, 
+  "stroke": true, 
+  "weight": 1
+}
+                )
+                .addTo(map_13cc1119887741afa21d6adf2c23a219);
+            
+    
+            var popup_30e561284fed46758a34406e59ce43ef = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_aa812077e4fe4a04ab6dca864700ba2a = $('<div id="html_aa812077e4fe4a04ab6dca864700ba2a" style="width: 100.0%; height: 100.0%;">Fairview Park: 13860 HKD per sq ft</div>')[0];
+                popup_30e561284fed46758a34406e59ce43ef.setContent(html_aa812077e4fe4a04ab6dca864700ba2a);
+            
+
+            circle_d5665f5219a74c9ca2c928d20c207a57.bindPopup(popup_30e561284fed46758a34406e59ce43ef)
+            ;
+
+            
+        
+    
+
+            var circle_601ec182e2f34d4ea89a1cd9bcaf8485 = L.circle(
+                [22.3030895, 114.2518018],
+                {
+  "bubblingMouseEvents": true, 
+  "color": "#FF0033", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": true, 
+  "fillColor": "#FF0033", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "opacity": 0.89, 
+  "radius": 679, 
+  "stroke": true, 
+  "weight": 1
+}
+                )
+                .addTo(map_13cc1119887741afa21d6adf2c23a219);
+            
+    
+            var popup_e348472a4cd64f5c86abe15bfcfd2851 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_43abf1eb84cc49d083382b2e11a7a90f = $('<div id="html_43abf1eb84cc49d083382b2e11a7a90f" style="width: 100.0%; height: 100.0%;">Ocean Shores: 16976 HKD per sq ft</div>')[0];
+                popup_e348472a4cd64f5c86abe15bfcfd2851.setContent(html_43abf1eb84cc49d083382b2e11a7a90f);
+            
+
+            circle_601ec182e2f34d4ea89a1cd9bcaf8485.bindPopup(popup_e348472a4cd64f5c86abe15bfcfd2851)
+            ;
+
+            
+        
+    
+
+            var circle_43d1726ecf914693a3746abc667778f9 = L.circle(
+                [22.4920119, 114.1390418],
+                {
+  "bubblingMouseEvents": true, 
+  "color": "#FF6633", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": true, 
+  "fillColor": "#FF6633", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "opacity": 0.89, 
+  "radius": 553, 
+  "stroke": true, 
+  "weight": 1
+}
+                )
+                .addTo(map_13cc1119887741afa21d6adf2c23a219);
+            
+    
+            var popup_5e7f3aa44563464e9fe615435cc1e5d4 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_8a108cb319c542dda935e06d197715ad = $('<div id="html_8a108cb319c542dda935e06d197715ad" style="width: 100.0%; height: 100.0%;">Fanling Town Center: 13831 HKD per sq ft</div>')[0];
+                popup_5e7f3aa44563464e9fe615435cc1e5d4.setContent(html_8a108cb319c542dda935e06d197715ad);
+            
+
+            circle_43d1726ecf914693a3746abc667778f9.bindPopup(popup_5e7f3aa44563464e9fe615435cc1e5d4)
+            ;
+
+            
+        
+    
+
+            var circle_e98eeb2a14a546a080215800e31c2cf8 = L.circle(
+                [22.2825515, 114.2166966],
+                {
+  "bubblingMouseEvents": true, 
+  "color": "#FF0033", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": true, 
+  "fillColor": "#FF0033", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "opacity": 0.89, 
+  "radius": 731, 
+  "stroke": true, 
+  "weight": 1
+}
+                )
+                .addTo(map_13cc1119887741afa21d6adf2c23a219);
+            
+    
+            var popup_2dfd0419bdce42b2b753034192b56d2c = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_e12f0f3ef93a43d3a2f3c5a28a6528c4 = $('<div id="html_e12f0f3ef93a43d3a2f3c5a28a6528c4" style="width: 100.0%; height: 100.0%;">Kornhill: 18280 HKD per sq ft</div>')[0];
+                popup_2dfd0419bdce42b2b753034192b56d2c.setContent(html_e12f0f3ef93a43d3a2f3c5a28a6528c4);
+            
+
+            circle_e98eeb2a14a546a080215800e31c2cf8.bindPopup(popup_2dfd0419bdce42b2b753034192b56d2c)
+            ;
+
+            
+        
+    
+
+            var circle_4d03c48c7b554a448dd481ee12c64193 = L.circle(
+                [999.0, 999.0],
+                {
+  "bubblingMouseEvents": true, 
+  "color": "#FF0033", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": true, 
+  "fillColor": "#FF0033", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "opacity": 0.89, 
+  "radius": 660, 
+  "stroke": true, 
+  "weight": 1
+}
+                )
+                .addTo(map_13cc1119887741afa21d6adf2c23a219);
+            
+    
+            var popup_1b985f95b28149cfa1c906a03a490eaa = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_b28d25014b54445682b90cbcbaf09d83 = $('<div id="html_b28d25014b54445682b90cbcbaf09d83" style="width: 100.0%; height: 100.0%;">Yoho Town: 16521 HKD per sq ft</div>')[0];
+                popup_1b985f95b28149cfa1c906a03a490eaa.setContent(html_b28d25014b54445682b90cbcbaf09d83);
+            
+
+            circle_4d03c48c7b554a448dd481ee12c64193.bindPopup(popup_1b985f95b28149cfa1c906a03a490eaa)
+            ;
+
+            
+        
+    
+
+            var circle_6c324f93ec85460790ab317f0bc3f8f9 = L.circle(
+                [999.0, 999.0],
+                {
+  "bubblingMouseEvents": true, 
+  "color": "#FF0033", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": true, 
+  "fillColor": "#FF0033", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "opacity": 0.89, 
+  "radius": 624, 
+  "stroke": true, 
+  "weight": 1
+}
+                )
+                .addTo(map_13cc1119887741afa21d6adf2c23a219);
+            
+    
+            var popup_407268a9b3a747cdb68356680f10d688 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_980298336c4440d1ba463e76d7899046 = $('<div id="html_980298336c4440d1ba463e76d7899046" style="width: 100.0%; height: 100.0%;">Chi Fu Fa Yuen: 15602 HKD per sq ft</div>')[0];
+                popup_407268a9b3a747cdb68356680f10d688.setContent(html_980298336c4440d1ba463e76d7899046);
+            
+
+            circle_6c324f93ec85460790ab317f0bc3f8f9.bindPopup(popup_407268a9b3a747cdb68356680f10d688)
+            ;
+
+            
+        
+    
+
+            var circle_749900c52c1b45cdbbfe18501a528aec = L.circle(
+                [22.362545, 114.1142593],
+                {
+  "bubblingMouseEvents": true, 
+  "color": "#FF6633", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": true, 
+  "fillColor": "#FF6633", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "opacity": 0.89, 
+  "radius": 520, 
+  "stroke": true, 
+  "weight": 1
+}
+                )
+                .addTo(map_13cc1119887741afa21d6adf2c23a219);
+            
+    
+            var popup_24237bc4f46a45d1a195286c9c98cb52 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_6852dd6dded745a8b0fabaa4a9c10107 = $('<div id="html_6852dd6dded745a8b0fabaa4a9c10107" style="width: 100.0%; height: 100.0%;">Riviera Gardens: 13013 HKD per sq ft</div>')[0];
+                popup_24237bc4f46a45d1a195286c9c98cb52.setContent(html_6852dd6dded745a8b0fabaa4a9c10107);
+            
+
+            circle_749900c52c1b45cdbbfe18501a528aec.bindPopup(popup_24237bc4f46a45d1a195286c9c98cb52)
+            ;
+
+            
+        
+    
+
+            var circle_1fb9e6cbc4d74783b89d8cce8f43e224 = L.circle(
+                [22.4865667, 114.1434352],
+                {
+  "bubblingMouseEvents": true, 
+  "color": "#FF6633", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": true, 
+  "fillColor": "#FF6633", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "opacity": 0.89, 
+  "radius": 559, 
+  "stroke": true, 
+  "weight": 1
+}
+                )
+                .addTo(map_13cc1119887741afa21d6adf2c23a219);
+            
+    
+            var popup_e331bb505806489187f4eab9d627626d = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_60efcd1321f84a7aaa718785a5554bc9 = $('<div id="html_60efcd1321f84a7aaa718785a5554bc9" style="width: 100.0%; height: 100.0%;">Dawning Views: 13989 HKD per sq ft</div>')[0];
+                popup_e331bb505806489187f4eab9d627626d.setContent(html_60efcd1321f84a7aaa718785a5554bc9);
+            
+
+            circle_1fb9e6cbc4d74783b89d8cce8f43e224.bindPopup(popup_e331bb505806489187f4eab9d627626d)
+            ;
+
+            
+        
+    
+
+            var circle_942625430be34e4fb4379c655252a92e = L.circle(
+                [22.2909131, 113.945295],
+                {
+  "bubblingMouseEvents": true, 
+  "color": "#FF6633", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": true, 
+  "fillColor": "#FF6633", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "opacity": 0.89, 
+  "radius": 582, 
+  "stroke": true, 
+  "weight": 1
+}
+                )
+                .addTo(map_13cc1119887741afa21d6adf2c23a219);
+            
+    
+            var popup_65c5cd7cbc504e7f889a076f48df8b20 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_1a97f809c8654fb99a3099f1b6dad5f0 = $('<div id="html_1a97f809c8654fb99a3099f1b6dad5f0" style="width: 100.0%; height: 100.0%;">Coastal Skyline: 14554 HKD per sq ft</div>')[0];
+                popup_65c5cd7cbc504e7f889a076f48df8b20.setContent(html_1a97f809c8654fb99a3099f1b6dad5f0);
+            
+
+            circle_942625430be34e4fb4379c655252a92e.bindPopup(popup_65c5cd7cbc504e7f889a076f48df8b20)
+            ;
+
+            
+        
+    
+
+            var circle_455f72f312a845f999b1dcc50cb42f33 = L.circle(
+                [22.3197111, 114.1930468],
+                {
+  "bubblingMouseEvents": true, 
+  "color": "#FF0033", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": true, 
+  "fillColor": "#FF0033", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "opacity": 0.89, 
+  "radius": 793, 
+  "stroke": true, 
+  "weight": 1
+}
+                )
+                .addTo(map_13cc1119887741afa21d6adf2c23a219);
+            
+    
+            var popup_0af096121a7948f1a851ec44c1f4de80 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_bbe708d36a414cf893c2571cf058ea19 = $('<div id="html_bbe708d36a414cf893c2571cf058ea19" style="width: 100.0%; height: 100.0%;">Grand Waterfront: 19833 HKD per sq ft</div>')[0];
+                popup_0af096121a7948f1a851ec44c1f4de80.setContent(html_bbe708d36a414cf893c2571cf058ea19);
+            
+
+            circle_455f72f312a845f999b1dcc50cb42f33.bindPopup(popup_0af096121a7948f1a851ec44c1f4de80)
+            ;
+
+            
+        
+    
+
+            var circle_354b4a5a78574b8aa3fbf4b629bbe32f = L.circle(
+                [22.2585801, 114.1320632],
+                {
+  "bubblingMouseEvents": true, 
+  "color": "#FF0033", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": true, 
+  "fillColor": "#FF0033", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "opacity": 0.89, 
+  "radius": 1333, 
+  "stroke": true, 
+  "weight": 1
+}
+                )
+                .addTo(map_13cc1119887741afa21d6adf2c23a219);
+            
+    
+            var popup_8cf8469094e44d6c88d519b18ba33d00 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_6f5d653597b04061a7b6026abcb890c1 = $('<div id="html_6f5d653597b04061a7b6026abcb890c1" style="width: 100.0%; height: 100.0%;">Residence Bel-Air: 33344 HKD per sq ft</div>')[0];
+                popup_8cf8469094e44d6c88d519b18ba33d00.setContent(html_6f5d653597b04061a7b6026abcb890c1);
+            
+
+            circle_354b4a5a78574b8aa3fbf4b629bbe32f.bindPopup(popup_8cf8469094e44d6c88d519b18ba33d00)
+            ;
+
+            
+        
+    
+
+            var circle_7ef4d510fc4c4535bd00c646dcb89439 = L.circle(
+                [22.3532608, 114.0626444],
+                {
+  "bubblingMouseEvents": true, 
+  "color": "#FF6633", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": true, 
+  "fillColor": "#FF6633", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "opacity": 0.89, 
+  "radius": 524, 
+  "stroke": true, 
+  "weight": 1
+}
+                )
+                .addTo(map_13cc1119887741afa21d6adf2c23a219);
+            
+    
+            var popup_efa983fff6ac43fba0ff1b615a2eefe7 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_f780419765e240b6918571e1cec28c31 = $('<div id="html_f780419765e240b6918571e1cec28c31" style="width: 100.0%; height: 100.0%;">Park Island: 13124 HKD per sq ft</div>')[0];
+                popup_efa983fff6ac43fba0ff1b615a2eefe7.setContent(html_f780419765e240b6918571e1cec28c31);
+            
+
+            circle_7ef4d510fc4c4535bd00c646dcb89439.bindPopup(popup_efa983fff6ac43fba0ff1b615a2eefe7)
+            ;
+
+            
+        
+    
+
+            var circle_9903f206a3ae4b81a7b1231a9006fbc8 = L.circle(
+                [22.2908527, 114.1949689],
+                {
+  "bubblingMouseEvents": true, 
+  "color": "#FF0033", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": true, 
+  "fillColor": "#FF0033", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "opacity": 0.89, 
+  "radius": 686, 
+  "stroke": true, 
+  "weight": 1
+}
+                )
+                .addTo(map_13cc1119887741afa21d6adf2c23a219);
+            
+    
+            var popup_46f33d4e767f4b03b4fc0bf2e08e2f83 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_ddabccfc40ac4709aa649cd60105ed7e = $('<div id="html_ddabccfc40ac4709aa649cd60105ed7e" style="width: 100.0%; height: 100.0%;">City Garden: 17166 HKD per sq ft</div>')[0];
+                popup_46f33d4e767f4b03b4fc0bf2e08e2f83.setContent(html_ddabccfc40ac4709aa649cd60105ed7e);
+            
+
+            circle_9903f206a3ae4b81a7b1231a9006fbc8.bindPopup(popup_46f33d4e767f4b03b4fc0bf2e08e2f83)
+            ;
+
+            
+        
+    
+
+            var circle_d24b4bb1346d46cb94a1681525e5cc1c = L.circle(
+                [999.0, 999.0],
+                {
+  "bubblingMouseEvents": true, 
+  "color": "#FF0033", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": true, 
+  "fillColor": "#FF0033", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "opacity": 0.89, 
+  "radius": 679, 
+  "stroke": true, 
+  "weight": 1
+}
+                )
+                .addTo(map_13cc1119887741afa21d6adf2c23a219);
+            
+    
+            var popup_31dc3e7d0a5e49cb8eda48ee93f69714 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_fd5d41220e0b4e25a443374f9ad5beab = $('<div id="html_fd5d41220e0b4e25a443374f9ad5beab" style="width: 100.0%; height: 100.0%;">Golden Lion Garden: 16981 HKD per sq ft</div>')[0];
+                popup_31dc3e7d0a5e49cb8eda48ee93f69714.setContent(html_fd5d41220e0b4e25a443374f9ad5beab);
+            
+
+            circle_d24b4bb1346d46cb94a1681525e5cc1c.bindPopup(popup_31dc3e7d0a5e49cb8eda48ee93f69714)
+            ;
+
+            
+        
+    
+
+            var circle_b60d43965c9a4fd6ab50206465b40dbe = L.circle(
+                [22.3828928, 114.2150666],
+                {
+  "bubblingMouseEvents": true, 
+  "color": "#FF6633", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": true, 
+  "fillColor": "#FF6633", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "opacity": 0.89, 
+  "radius": 585, 
+  "stroke": true, 
+  "weight": 1
+}
+                )
+                .addTo(map_13cc1119887741afa21d6adf2c23a219);
+            
+    
+            var popup_c2152acf990d4e3c9c9541200a0269cc = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_e7bad9dca8c24818a5e50772253c9e14 = $('<div id="html_e7bad9dca8c24818a5e50772253c9e14" style="width: 100.0%; height: 100.0%;">Castello: 14633 HKD per sq ft</div>')[0];
+                popup_c2152acf990d4e3c9c9541200a0269cc.setContent(html_e7bad9dca8c24818a5e50772253c9e14);
+            
+
+            circle_b60d43965c9a4fd6ab50206465b40dbe.bindPopup(popup_c2152acf990d4e3c9c9541200a0269cc)
+            ;
+
+            
+        
+    
+
+            var circle_061dc8a3e2d04124b00d1493d6552ed5 = L.circle(
+                [22.282917, 114.1264106],
+                {
+  "bubblingMouseEvents": true, 
+  "color": "#FF0033", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": true, 
+  "fillColor": "#FF0033", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "opacity": 0.89, 
+  "radius": 948, 
+  "stroke": true, 
+  "weight": 1
+}
+                )
+                .addTo(map_13cc1119887741afa21d6adf2c23a219);
+            
+    
+            var popup_bfa38cb4fec942728862f3ca27147ae4 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_78b498fc3d27413485833a98e869e859 = $('<div id="html_78b498fc3d27413485833a98e869e859" style="width: 100.0%; height: 100.0%;">The Merton: 23710 HKD per sq ft</div>')[0];
+                popup_bfa38cb4fec942728862f3ca27147ae4.setContent(html_78b498fc3d27413485833a98e869e859);
+            
+
+            circle_061dc8a3e2d04124b00d1493d6552ed5.bindPopup(popup_bfa38cb4fec942728862f3ca27147ae4)
+            ;
+
+            
+        
+    
+
+            var circle_52053331201a4e22aae3c7edf901b2db = L.circle(
+                [22.3688294, 114.1749912],
+                {
+  "bubblingMouseEvents": true, 
+  "color": "#FF0033", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": true, 
+  "fillColor": "#FF0033", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "opacity": 0.89, 
+  "radius": 744, 
+  "stroke": true, 
+  "weight": 1
+}
+                )
+                .addTo(map_13cc1119887741afa21d6adf2c23a219);
+            
+    
+            var popup_fd47cab585e54b6683e60c097164801f = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_283f19e9034742b4b9de7051e9075996 = $('<div id="html_283f19e9034742b4b9de7051e9075996" style="width: 100.0%; height: 100.0%;">Festival City: 18615 HKD per sq ft</div>')[0];
+                popup_fd47cab585e54b6683e60c097164801f.setContent(html_283f19e9034742b4b9de7051e9075996);
+            
+
+            circle_52053331201a4e22aae3c7edf901b2db.bindPopup(popup_fd47cab585e54b6683e60c097164801f)
+            ;
+
+            
+        
+    
+
+            var circle_a3752fde913e4b4a8c5d54f9b1aed6b6 = L.circle(
+                [22.373168, 113.9661371],
+                {
+  "bubblingMouseEvents": true, 
+  "color": "#FF6633", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": true, 
+  "fillColor": "#FF6633", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "opacity": 0.89, 
+  "radius": 488, 
+  "stroke": true, 
+  "weight": 1
+}
+                )
+                .addTo(map_13cc1119887741afa21d6adf2c23a219);
+            
+    
+            var popup_e081d290c913424a94f0c26d1c70485f = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_059573d65f6d4ae887e80e4414c5833e = $('<div id="html_059573d65f6d4ae887e80e4414c5833e" style="width: 100.0%; height: 100.0%;">Siu Hei Court: 12204 HKD per sq ft</div>')[0];
+                popup_e081d290c913424a94f0c26d1c70485f.setContent(html_059573d65f6d4ae887e80e4414c5833e);
+            
+
+            circle_a3752fde913e4b4a8c5d54f9b1aed6b6.bindPopup(popup_e081d290c913424a94f0c26d1c70485f)
+            ;
+
+            
+        
+    
+
+            var circle_655d68a0b59749179fbc494fadcf5e73 = L.circle(
+                [22.394262, 113.973278],
+                {
+  "bubblingMouseEvents": true, 
+  "color": "#FF0033", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": true, 
+  "fillColor": "#FF0033", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "opacity": 0.89, 
+  "radius": 670, 
+  "stroke": true, 
+  "weight": 1
+}
+                )
+                .addTo(map_13cc1119887741afa21d6adf2c23a219);
+            
+    
+            var popup_eb08bcaa86ba4e6ca2d23837419f5665 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_e9cc733599504eac86514df7ab0a7578 = $('<div id="html_e9cc733599504eac86514df7ab0a7578" style="width: 100.0%; height: 100.0%;">Century Gateway: 16768 HKD per sq ft</div>')[0];
+                popup_eb08bcaa86ba4e6ca2d23837419f5665.setContent(html_e9cc733599504eac86514df7ab0a7578);
+            
+
+            circle_655d68a0b59749179fbc494fadcf5e73.bindPopup(popup_eb08bcaa86ba4e6ca2d23837419f5665)
+            ;
+
+            
+        
+    
+
+            var circle_37c1fc99203a434a9e074de8ed9d3c85 = L.circle(
+                [22.2662096, 114.2499136],
+                {
+  "bubblingMouseEvents": true, 
+  "color": "#FF0033", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": true, 
+  "fillColor": "#FF0033", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "opacity": 0.89, 
+  "radius": 745, 
+  "stroke": true, 
+  "weight": 1
+}
+                )
+                .addTo(map_13cc1119887741afa21d6adf2c23a219);
+            
+    
+            var popup_2e16b99b7889464ea2610e83e09638fb = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_0b6a2e6ee9024ffc865fe6ab327ef26f = $('<div id="html_0b6a2e6ee9024ffc865fe6ab327ef26f" style="width: 100.0%; height: 100.0%;">Island Resort: 18632 HKD per sq ft</div>')[0];
+                popup_2e16b99b7889464ea2610e83e09638fb.setContent(html_0b6a2e6ee9024ffc865fe6ab327ef26f);
+            
+
+            circle_37c1fc99203a434a9e074de8ed9d3c85.bindPopup(popup_2e16b99b7889464ea2610e83e09638fb)
+            ;
+
+            
+        
+    
+
+            var circle_a5f53230cc454e8c97d389e55c107071 = L.circle(
+                [22.3212017, 114.1548878],
+                {
+  "bubblingMouseEvents": true, 
+  "color": "#FF0033", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": true, 
+  "fillColor": "#FF0033", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "opacity": 0.89, 
+  "radius": 783, 
+  "stroke": true, 
+  "weight": 1
+}
+                )
+                .addTo(map_13cc1119887741afa21d6adf2c23a219);
+            
+    
+            var popup_d6cee50e45644f249781ce743e3e2f52 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_d35f8552f7c54a55bb15ee970344e8cd = $('<div id="html_d35f8552f7c54a55bb15ee970344e8cd" style="width: 100.0%; height: 100.0%;">Hampton Place: 19597 HKD per sq ft</div>')[0];
+                popup_d6cee50e45644f249781ce743e3e2f52.setContent(html_d35f8552f7c54a55bb15ee970344e8cd);
+            
+
+            circle_a5f53230cc454e8c97d389e55c107071.bindPopup(popup_d6cee50e45644f249781ce743e3e2f52)
+            ;
+
+            
+        
+    
+
+            var circle_561e2cd7f84c4fabacb64ca3eb9746a5 = L.circle(
+                [22.3527055, 114.1088938],
+                {
+  "bubblingMouseEvents": true, 
+  "color": "#FF0033", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": true, 
+  "fillColor": "#FF0033", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "opacity": 0.89, 
+  "radius": 612, 
+  "stroke": true, 
+  "weight": 1
+}
+                )
+                .addTo(map_13cc1119887741afa21d6adf2c23a219);
+            
+    
+            var popup_88106c253e4f41bfa94657e36f595254 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_ef342fcdf08d46bbb117a6c94d25a5c4 = $('<div id="html_ef342fcdf08d46bbb117a6c94d25a5c4" style="width: 100.0%; height: 100.0%;">Grand Horizon: 15318 HKD per sq ft</div>')[0];
+                popup_88106c253e4f41bfa94657e36f595254.setContent(html_ef342fcdf08d46bbb117a6c94d25a5c4);
+            
+
+            circle_561e2cd7f84c4fabacb64ca3eb9746a5.bindPopup(popup_88106c253e4f41bfa94657e36f595254)
+            ;
+
+            
+        
+    
+
+            var circle_5542f3ad0aa64a1a9639085b6f0a2b09 = L.circle(
+                [22.4141764, 113.9788499],
+                {
+  "bubblingMouseEvents": true, 
+  "color": "#FF6633", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": true, 
+  "fillColor": "#FF6633", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "opacity": 0.89, 
+  "radius": 425, 
+  "stroke": true, 
+  "weight": 1
+}
+                )
+                .addTo(map_13cc1119887741afa21d6adf2c23a219);
+            
+    
+            var popup_32f4e8f835164333b1653ed0f7cfc96f = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_e913792a13ae459397f6623fb2cd90a9 = $('<div id="html_e913792a13ae459397f6623fb2cd90a9" style="width: 100.0%; height: 100.0%;">Siu Hong Court: 10634 HKD per sq ft</div>')[0];
+                popup_32f4e8f835164333b1653ed0f7cfc96f.setContent(html_e913792a13ae459397f6623fb2cd90a9);
+            
+
+            circle_5542f3ad0aa64a1a9639085b6f0a2b09.bindPopup(popup_32f4e8f835164333b1653ed0f7cfc96f)
+            ;
+
+            
+        
+    
+
+            var circle_f44ee4f48eed48bab1c7f1ca332841d8 = L.circle(
+                [22.4290096, 114.2438875],
+                {
+  "bubblingMouseEvents": true, 
+  "color": "#FF0033", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": true, 
+  "fillColor": "#FF0033", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "opacity": 0.89, 
+  "radius": 633, 
+  "stroke": true, 
+  "weight": 1
+}
+                )
+                .addTo(map_13cc1119887741afa21d6adf2c23a219);
+            
+    
+            var popup_36c3bd7bfa1741cb9d9c7a79370c1708 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_11903740e5694ec184d437af66f64bc3 = $('<div id="html_11903740e5694ec184d437af66f64bc3" style="width: 100.0%; height: 100.0%;">Lake Silver: 15829 HKD per sq ft</div>')[0];
+                popup_36c3bd7bfa1741cb9d9c7a79370c1708.setContent(html_11903740e5694ec184d437af66f64bc3);
+            
+
+            circle_f44ee4f48eed48bab1c7f1ca332841d8.bindPopup(popup_36c3bd7bfa1741cb9d9c7a79370c1708)
+            ;
+
+            
+        
+    
+
+            var circle_ec1f8cc89e624461b2bba57605ad5139 = L.circle(
+                [22.3437181, 114.1101188],
+                {
+  "bubblingMouseEvents": true, 
+  "color": "#FF6633", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": true, 
+  "fillColor": "#FF6633", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "opacity": 0.89, 
+  "radius": 554, 
+  "stroke": true, 
+  "weight": 1
+}
+                )
+                .addTo(map_13cc1119887741afa21d6adf2c23a219);
+            
+    
+            var popup_28361a532479481393e2aafff5d754ee = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_0fcad80d63c44df7afd9f78a0a0633dc = $('<div id="html_0fcad80d63c44df7afd9f78a0a0633dc" style="width: 100.0%; height: 100.0%;">Rambler Crest: 13858 HKD per sq ft</div>')[0];
+                popup_28361a532479481393e2aafff5d754ee.setContent(html_0fcad80d63c44df7afd9f78a0a0633dc);
+            
+
+            circle_ec1f8cc89e624461b2bba57605ad5139.bindPopup(popup_28361a532479481393e2aafff5d754ee)
+            ;
+
+            
+        
+    
+
+            var circle_761247490a214330ba5e217b1362e1e4 = L.circle(
+                [22.3242915, 114.215546],
+                {
+  "bubblingMouseEvents": true, 
+  "color": "#FF0033", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": true, 
+  "fillColor": "#FF0033", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "opacity": 0.89, 
+  "radius": 679, 
+  "stroke": true, 
+  "weight": 1
+}
+                )
+                .addTo(map_13cc1119887741afa21d6adf2c23a219);
+            
+    
+            var popup_8d08025275c94f74b7f3e9a0ed0d9260 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_8dcccadfdec94a0aafa33e592aed61f5 = $('<div id="html_8dcccadfdec94a0aafa33e592aed61f5" style="width: 100.0%; height: 100.0%;">Amoy Gardens: 16983 HKD per sq ft</div>')[0];
+                popup_8d08025275c94f74b7f3e9a0ed0d9260.setContent(html_8dcccadfdec94a0aafa33e592aed61f5);
+            
+
+            circle_761247490a214330ba5e217b1362e1e4.bindPopup(popup_8d08025275c94f74b7f3e9a0ed0d9260)
+            ;
+
+            
+        
+    
+
+            var circle_62536fb201d649d98f961cee56582d18 = L.circle(
+                [22.3062871, 114.2580828],
+                {
+  "bubblingMouseEvents": true, 
+  "color": "#FF0033", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": true, 
+  "fillColor": "#FF0033", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "opacity": 0.89, 
+  "radius": 687, 
+  "stroke": true, 
+  "weight": 1
+}
+                )
+                .addTo(map_13cc1119887741afa21d6adf2c23a219);
+            
+    
+            var popup_7b3d59b188e84bf29318179b2820c30c = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_b2db2ca888574b2fbfaeec3a87410002 = $('<div id="html_b2db2ca888574b2fbfaeec3a87410002" style="width: 100.0%; height: 100.0%;">Park Central: 17181 HKD per sq ft</div>')[0];
+                popup_7b3d59b188e84bf29318179b2820c30c.setContent(html_b2db2ca888574b2fbfaeec3a87410002);
+            
+
+            circle_62536fb201d649d98f961cee56582d18.bindPopup(popup_7b3d59b188e84bf29318179b2820c30c)
+            ;
+
+            
+        
+    
+
+            var circle_044306d2d9f84be7ac63259b3256ac08 = L.circle(
+                [22.4225841, 114.2328246],
+                {
+  "bubblingMouseEvents": true, 
+  "color": "#FF0033", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": true, 
+  "fillColor": "#FF0033", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "opacity": 0.89, 
+  "radius": 707, 
+  "stroke": true, 
+  "weight": 1
+}
+                )
+                .addTo(map_13cc1119887741afa21d6adf2c23a219);
+            
+    
+            var popup_0592c069a99346ecaa90dc26d655d380 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_85a1b81097524d2a95080c1fe37240f9 = $('<div id="html_85a1b81097524d2a95080c1fe37240f9" style="width: 100.0%; height: 100.0%;">Sunshine City: 17680 HKD per sq ft</div>')[0];
+                popup_0592c069a99346ecaa90dc26d655d380.setContent(html_85a1b81097524d2a95080c1fe37240f9);
+            
+
+            circle_044306d2d9f84be7ac63259b3256ac08.bindPopup(popup_0592c069a99346ecaa90dc26d655d380)
+            ;
+
+            
+        
+    
+
+            var circle_7be569c0a65043388a57847a041f8036 = L.circle(
+                [22.3072228, 114.2290248],
+                {
+  "bubblingMouseEvents": true, 
+  "color": "#FF6633", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": true, 
+  "fillColor": "#FF6633", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "opacity": 0.89, 
+  "radius": 590, 
+  "stroke": true, 
+  "weight": 1
+}
+                )
+                .addTo(map_13cc1119887741afa21d6adf2c23a219);
+            
+    
+            var popup_0afe53fe564e45c3964b9d6048f8c1cd = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_39a26c9591e84365a77f74f2b9dd06fc = $('<div id="html_39a26c9591e84365a77f74f2b9dd06fc" style="width: 100.0%; height: 100.0%;">Laguna City: 14772 HKD per sq ft</div>')[0];
+                popup_0afe53fe564e45c3964b9d6048f8c1cd.setContent(html_39a26c9591e84365a77f74f2b9dd06fc);
+            
+
+            circle_7be569c0a65043388a57847a041f8036.bindPopup(popup_0afe53fe564e45c3964b9d6048f8c1cd)
+            ;
+
+            
+        
+    
+
+            var circle_0ee5378bba3f49b6b9df6484e14db86a = L.circle(
+                [22.4529355, 114.1696007],
+                {
+  "bubblingMouseEvents": true, 
+  "color": "#FF0033", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": true, 
+  "fillColor": "#FF0033", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "opacity": 0.89, 
+  "radius": 643, 
+  "stroke": true, 
+  "weight": 1
+}
+                )
+                .addTo(map_13cc1119887741afa21d6adf2c23a219);
+            
+    
+            var popup_16d7259fed244618b74b9205551303c2 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_e286176a36fc490eab274d53d202b529 = $('<div id="html_e286176a36fc490eab274d53d202b529" style="width: 100.0%; height: 100.0%;">Tai Po Centre: 16086 HKD per sq ft</div>')[0];
+                popup_16d7259fed244618b74b9205551303c2.setContent(html_e286176a36fc490eab274d53d202b529);
+            
+
+            circle_0ee5378bba3f49b6b9df6484e14db86a.bindPopup(popup_16d7259fed244618b74b9205551303c2)
+            ;
+
+            
+        
+    
+
+            var circle_9e299a646d174694a5115c9a321994a9 = L.circle(
+                [22.3312687, 114.2269845],
+                {
+  "bubblingMouseEvents": true, 
+  "color": "#FF6633", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": true, 
+  "fillColor": "#FF6633", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "opacity": 0.89, 
+  "radius": 412, 
+  "stroke": true, 
+  "weight": 1
+}
+                )
+                .addTo(map_13cc1119887741afa21d6adf2c23a219);
+            
+    
+            var popup_b2d092f1dfb943a1bc3401cba2fc7342 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_16f0ed0ee13a458385b512cd77e44f32 = $('<div id="html_16f0ed0ee13a458385b512cd77e44f32" style="width: 100.0%; height: 100.0%;">Shun Chi Court: 10316 HKD per sq ft</div>')[0];
+                popup_b2d092f1dfb943a1bc3401cba2fc7342.setContent(html_16f0ed0ee13a458385b512cd77e44f32);
+            
+
+            circle_9e299a646d174694a5115c9a321994a9.bindPopup(popup_b2d092f1dfb943a1bc3401cba2fc7342)
+            ;
+
+            
+        
+    
+
+            var circle_cad85bf8de474b56979686f662d0611c = L.circle(
+                [22.4600881, 114.0014154],
+                {
+  "bubblingMouseEvents": true, 
+  "color": "#FF6633", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": true, 
+  "fillColor": "#FF6633", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "opacity": 0.89, 
+  "radius": 490, 
+  "stroke": true, 
+  "weight": 1
+}
+                )
+                .addTo(map_13cc1119887741afa21d6adf2c23a219);
+            
+    
+            var popup_a5d4455c605f4b01ad44a2112882b132 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_3d468d48aff24c5283bd2e7a91d74afe = $('<div id="html_3d468d48aff24c5283bd2e7a91d74afe" style="width: 100.0%; height: 100.0%;">Central Park Towers: 12271 HKD per sq ft</div>')[0];
+                popup_a5d4455c605f4b01ad44a2112882b132.setContent(html_3d468d48aff24c5283bd2e7a91d74afe);
+            
+
+            circle_cad85bf8de474b56979686f662d0611c.bindPopup(popup_a5d4455c605f4b01ad44a2112882b132)
+            ;
+
+            
+        
+    
+
+            var circle_32d40bf42cea412999d36244375ae1e2 = L.circle(
+                [22.2423467, 114.149089],
+                {
+  "bubblingMouseEvents": true, 
+  "color": "#FF0033", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": true, 
+  "fillColor": "#FF0033", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "opacity": 0.89, 
+  "radius": 736, 
+  "stroke": true, 
+  "weight": 1
+}
+                )
+                .addTo(map_13cc1119887741afa21d6adf2c23a219);
+            
+    
+            var popup_04fe015dfc9d442883d53cb24a8fc173 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_7c4f42d957834fbda834212cb77e5360 = $('<div id="html_7c4f42d957834fbda834212cb77e5360" style="width: 100.0%; height: 100.0%;">South Horizons: 18400 HKD per sq ft</div>')[0];
+                popup_04fe015dfc9d442883d53cb24a8fc173.setContent(html_7c4f42d957834fbda834212cb77e5360);
+            
+
+            circle_32d40bf42cea412999d36244375ae1e2.bindPopup(popup_04fe015dfc9d442883d53cb24a8fc173)
+            ;
+
+            
+        
+    
+
+            var circle_a6a6457a99da4563a3324f46ac25b0f2 = L.circle(
+                [22.3661226, 114.0568942],
+                {
+  "bubblingMouseEvents": true, 
+  "color": "#FF6633", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": true, 
+  "fillColor": "#FF6633", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "opacity": 0.89, 
+  "radius": 519, 
+  "stroke": true, 
+  "weight": 1
+}
+                )
+                .addTo(map_13cc1119887741afa21d6adf2c23a219);
+            
+    
+            var popup_408f954bf715491fb7f36cf55e42f576 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_5d7b401aaa864e7aa707b149e27e5fd0 = $('<div id="html_5d7b401aaa864e7aa707b149e27e5fd0" style="width: 100.0%; height: 100.0%;">Sea Crest Villa: 12989 HKD per sq ft</div>')[0];
+                popup_408f954bf715491fb7f36cf55e42f576.setContent(html_5d7b401aaa864e7aa707b149e27e5fd0);
+            
+
+            circle_a6a6457a99da4563a3324f46ac25b0f2.bindPopup(popup_408f954bf715491fb7f36cf55e42f576)
+            ;
+
+            
+        
+    
+
+            var circle_182dd6afdf2c42ad86e7be5b20aaf3da = L.circle(
+                [22.4260109, 114.2426639],
+                {
+  "bubblingMouseEvents": true, 
+  "color": "#FF6633", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": true, 
+  "fillColor": "#FF6633", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "opacity": 0.89, 
+  "radius": 529, 
+  "stroke": true, 
+  "weight": 1
+}
+                )
+                .addTo(map_13cc1119887741afa21d6adf2c23a219);
+            
+    
+            var popup_9a3547a866264f47afcd04b06b642a71 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_d148f0b8304e4642802423a4340921ab = $('<div id="html_d148f0b8304e4642802423a4340921ab" style="width: 100.0%; height: 100.0%;">Monte Vista: 13229 HKD per sq ft</div>')[0];
+                popup_9a3547a866264f47afcd04b06b642a71.setContent(html_d148f0b8304e4642802423a4340921ab);
+            
+
+            circle_182dd6afdf2c42ad86e7be5b20aaf3da.bindPopup(popup_9a3547a866264f47afcd04b06b642a71)
+            ;
+
+            
+        
+    
+
+            var circle_319e2daf305c453ebab2c38c50995bd4 = L.circle(
+                [22.2974324, 114.2725646],
+                {
+  "bubblingMouseEvents": true, 
+  "color": "#FF6633", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": true, 
+  "fillColor": "#FF6633", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "opacity": 0.89, 
+  "radius": 550, 
+  "stroke": true, 
+  "weight": 1
+}
+                )
+                .addTo(map_13cc1119887741afa21d6adf2c23a219);
+            
+    
+            var popup_07e638dd5a5844a090c19bafa7561254 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_c3d1f2d347e84c8fbe8dbd0b952bb1e5 = $('<div id="html_c3d1f2d347e84c8fbe8dbd0b952bb1e5" style="width: 100.0%; height: 100.0%;">The Beaumount: 13760 HKD per sq ft</div>')[0];
+                popup_07e638dd5a5844a090c19bafa7561254.setContent(html_c3d1f2d347e84c8fbe8dbd0b952bb1e5);
+            
+
+            circle_319e2daf305c453ebab2c38c50995bd4.bindPopup(popup_07e638dd5a5844a090c19bafa7561254)
+            ;
+
+            
+        
+    
+
+            var circle_577885d409364cdbbc0c8afb06218a3b = L.circle(
+                [22.4178587, 114.2257146],
+                {
+  "bubblingMouseEvents": true, 
+  "color": "#FF6633", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": true, 
+  "fillColor": "#FF6633", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "opacity": 0.89, 
+  "radius": 567, 
+  "stroke": true, 
+  "weight": 1
+}
+                )
+                .addTo(map_13cc1119887741afa21d6adf2c23a219);
+            
+    
+            var popup_3078ff792a2143b4b931b0dc829cd508 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_e27ced7b273149c39e2def3677ce2ee4 = $('<div id="html_e27ced7b273149c39e2def3677ce2ee4" style="width: 100.0%; height: 100.0%;">Vista Paradiso: 14197 HKD per sq ft</div>')[0];
+                popup_3078ff792a2143b4b931b0dc829cd508.setContent(html_e27ced7b273149c39e2def3677ce2ee4);
+            
+
+            circle_577885d409364cdbbc0c8afb06218a3b.bindPopup(popup_3078ff792a2143b4b931b0dc829cd508)
+            ;
+
+            
+        
+    
+
+            var circle_f7862587eece4e3ebf2084cb03ee6b73 = L.circle(
+                [22.3668116, 114.116011],
+                {
+  "bubblingMouseEvents": true, 
+  "color": "#FF0033", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": true, 
+  "fillColor": "#FF0033", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "opacity": 0.89, 
+  "radius": 673, 
+  "stroke": true, 
+  "weight": 1
+}
+                )
+                .addTo(map_13cc1119887741afa21d6adf2c23a219);
+            
+    
+            var popup_cb6d0eef7f91403e8176a8dbdb728267 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_364079473f3b464f864de6475bb44789 = $('<div id="html_364079473f3b464f864de6475bb44789" style="width: 100.0%; height: 100.0%;">Chelsea Court: 16840 HKD per sq ft</div>')[0];
+                popup_cb6d0eef7f91403e8176a8dbdb728267.setContent(html_364079473f3b464f864de6475bb44789);
+            
+
+            circle_f7862587eece4e3ebf2084cb03ee6b73.bindPopup(popup_cb6d0eef7f91403e8176a8dbdb728267)
+            ;
+
+            
+        
+    
+
+            var circle_9b450451bf4d44559f114918247f0afc = L.circle(
+                [22.3631561, 114.1157248],
+                {
+  "bubblingMouseEvents": true, 
+  "color": "#FF0033", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": true, 
+  "fillColor": "#FF0033", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "opacity": 0.89, 
+  "radius": 627, 
+  "stroke": true, 
+  "weight": 1
+}
+                )
+                .addTo(map_13cc1119887741afa21d6adf2c23a219);
+            
+    
+            var popup_fcc9623598954796ad774b042018aa62 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_9049b25877cb4e79b4cb13b4ab83550c = $('<div id="html_9049b25877cb4e79b4cb13b4ab83550c" style="width: 100.0%; height: 100.0%;">City Point: 15675 HKD per sq ft</div>')[0];
+                popup_fcc9623598954796ad774b042018aa62.setContent(html_9049b25877cb4e79b4cb13b4ab83550c);
+            
+
+            circle_9b450451bf4d44559f114918247f0afc.bindPopup(popup_fcc9623598954796ad774b042018aa62)
+            ;
+
+            
+        
+</script>
