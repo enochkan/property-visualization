@@ -12,6 +12,7 @@ cycler==0.10.0
 decorator==4.3.0
 enum34==1.1.6
 esgitit==0.1.5
+folium==0.6.0
 funcsigs==1.0.2
 functools32==3.2.3.post2
 future==0.16.0
