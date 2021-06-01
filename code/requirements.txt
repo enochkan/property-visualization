@@ -99,7 +99,7 @@ termcolor==1.1.0
 Theano==1.0.2
 tornado==5.1
 traitlets==4.3.2
-urllib3==1.23
+urllib3==1.26.5
 virtualenv==16.0.0
 Werkzeug==0.14.1
 xattr==0.6.4
